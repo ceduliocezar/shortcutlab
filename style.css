@@ -1,5 +1,24 @@
 * {
     margin: 0;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.app-name{
+    font-size: 30pt;
+    color: #48acf0;
+    font-weight: bold;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    
+}
+
+.lab-info {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size:12pt;
+    color: #a9a9a9;
+    margin-bottom: 5vh;
+    text-align: center;
 }
 
 body {
@@ -19,7 +38,7 @@ p {
 
 .shortcut-category {
     font-family: 'Montserrat', Helvetica, sans-serif;
-    font-size: 20pt;
+    font-size: 18pt;
     color: #a9a9a9;
 }
 
@@ -43,15 +62,20 @@ p {
 .content {
     margin: auto;
     width: 90%;
+    display: none;
 }
 
 .incorrect{
-    color: #b80c09;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #b80c09;
     background: #FFFFFF;
 }
 
 .correct{
-    color: #7be0ad;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #7be0ad;
     background: #FFFFFF;
 }
 
@@ -69,8 +93,80 @@ p {
 
 .shortcut-item{
     margin: 20pt 0 0 0;
-    border: aqua;
     border-radius: 5pt;
     padding: 10pt;
 }
-    
+
+.loader {
+    border: 5px solid #cbcbcb; 
+    border-top: 5px solid #48acf0; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: none;
+    animation: spin 1.5s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.next-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.lab-session-container{
+    display: none;
+}
+
+.lab-loading-container{
+    display: none;
+}
+
+.lab-selection-container{
+    display: none;
+    margin-top: 5vh;
+}
+
+.intro-container{
+    width: 100%;
+    padding-top: 20vh;
+    margin: auto;
+}
+
+.welcome-title{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 30pt;
+    color: #424242;
+}
+
+.welcome-subtitle{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 20pt;
+    color: #a9a9a9;
+}
+
+.next-button {
+    display:block;
+    height: 50px;
+    width: 50px;
+    margin: 5vh auto;
+    border-radius: 50%;
+    border: 1px solid #a9a9a9;
+  }
+
+  .selection-title {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5vh;
+    text-align: center;
+    font-size: 30pt;
+    color: #424242;
+  }

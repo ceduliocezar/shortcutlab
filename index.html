@@ -12,16 +12,45 @@
 
 <body>
 
-    <div class="content">
-        <p class="shortcut-description"></p>
-        <p class="shortcut-category"></p>
-        <input type="text" class="shortcut-input" placeholder="Press the key combination" />
+    <div class="intro-container">
+        <p class="welcome-title">Welcome to <b class="app-name">shortcutlab!</b></p>
+        <p class="welcome-subtitle">Practice your favorite tools shortcuts</p>
 
-        <ul class="shortcut-list">
-        </ul>
+        <a class="next-button" href="#" onclick="displaySelectionView();return false;"><i class="ion-ios-arrow-down"></i></a>
+
     </div>
 
-    <script type="text/javascript" src="./script.js"></script>
+    <div class="content">
+
+        <p class="app-name">shortcutlab</p>
+
+        <div class="lab-selection-container">
+            <p class="selection-title"><b>Select</b> a lab to begin</p>
+            <div class="loader" id="labs-loader"></div>
+            <ul class="lab-list-containter" id="lab-list-container"></ul>
+        </div>
+
+        <div class="lab-loading-container">
+            <div class="loader"></div>
+        </div>
+
+        <div class="lab-session-container">
+            <p class="lab-info"></p>
+            <p class="shortcut-description"></p>
+            <p class="shortcut-category"></p>
+            <input type="text" class="shortcut-input" placeholder="Press the key combination" />
+
+            <ul class="shortcut-list">
+            </ul>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <script type="text/javascript" src="./scripts/lab.js"></script>
+    <script type="text/javascript" src="./scripts/category.js"></script>
+    <script type="text/javascript" src="./scripts/shortcut.js"></script>
+    <script type="text/javascript" src="./scripts/fetch-labs.js"></script>
 </body>
 
 </html>

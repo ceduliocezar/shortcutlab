@@ -1,128 +1,116 @@
 {
-  "platform": "GNU/LINUX",
-  "software": "Visual Studio Code",
-  "version": "1.27.2",
-  "shortcuts": [
-    {
-      "description": "New file",
-      "keys": [
-        "Control",
-        "N"
-      ]
-    },
-    {
-      "description": "Toogle fulll screen",
-      "keys": [
-        "F11"
-      ]
-    },
-    {
-      "description": "Go to next error",
-      "keys": [
-        "F8"
-      ]
-    },
-    {
-      "description": "Show source control",
-      "keys": [
-        "Control",
-        "Shift",
-        "G"
-      ]
-    }
-  ],
-  "categories": [
-    {
-      "description": "Debug",
-      "shortcuts": [
-        {
-          "description": "Toogle breakpoint",
-          "keys": [
-            "F9"
-          ]
-        },
-        {
-          "description": "Start / Continue ",
-          "keys": [
-            "F5"
-          ]
-        },
-        {
-          "description": "Step in / out ",
-          "keys": [
+   "platform":"GNU/LINUX",
+   "software":"Visual Studio Code",
+   "version":"1.27.2",
+   "shortcuts":[
+      {
+         "description":"New file",
+         "keys":[
+            "Control",
+            "N"
+         ]
+      },
+      {
+         "description":"Toogle fulll screen",
+         "keys":[
             "F11"
-          ]
-        },
-        {
-          "description": "Step over ",
-          "keys": [
+         ]
+      },
+      {
+         "description":"Go to next error",
+         "keys":[
+            "F8"
+         ]
+      },
+      {
+         "description":"Show source control",
+         "keys":[
+            "Control",
+            "Shift",
+            "G"
+         ]
+      },
+      {
+         "description":"Toogle breakpoint",
+         "keys":[
+            "F9"
+         ]
+      },
+      {
+         "description":"Start / Continue ",
+         "keys":[
+            "F5"
+         ]
+      },
+      {
+         "description":"Step in / out ",
+         "keys":[
+            "F11"
+         ]
+      },
+      {
+         "description":"Step over ",
+         "keys":[
             "F10"
-          ]
-        },
-        {
-          "description": "Stop ",
-          "keys": [
+         ]
+      },
+      {
+         "description":"Stop ",
+         "keys":[
             "Shift",
             "F10"
-          ]
-        },
-        {
-          "description": "Show hover ",
-          "keys": [
+         ]
+      },
+      {
+         "description":"Show hover ",
+         "keys":[
             "Control",
             "K"
-          ]
-        }
-      ]
-    },
-    {
-      "description": "General",
-      "shortcuts": [
-        {
-          "description": "Show Command Pallete",
-          "keys": [
+         ]
+      },
+      {
+         "description":"Show Command Pallete",
+         "keys":[
             "Control",
             "Shift",
             "P"
-          ]
-        },
-        {
-          "description": "Quick Open, Go to File",
-          "keys": [
+         ]
+      },
+      {
+         "description":"Quick Open, Go to File",
+         "keys":[
             "Control",
             "P"
-          ]
-        },
-        {
-          "description": "New window/instance",
-          "keys": [
+         ]
+      },
+      {
+         "description":"New window/instance",
+         "keys":[
             "Control",
             "Shift",
             "N"
-          ]
-        },
-        {
-          "description": "Close window/instance",
-          "keys": [
+         ]
+      },
+      {
+         "description":"Close window/instance",
+         "keys":[
             "Control",
             "W"
-          ]
-        },
-        {
-          "description": "User settings",
-          "keys": [
+         ]
+      },
+      {
+         "description":"User settings",
+         "keys":[
             "Control",
             ","
-          ]
-        },
-        {
-          "description": "Keyboard shortcuts",
-          "keys": [
+         ]
+      },
+      {
+         "description":"Keyboard shortcuts",
+         "keys":[
             "Control",
             "K"
-          ]
-        }
-      ]
-    }
-  ]
+         ]
+      }
+   ]
 }
