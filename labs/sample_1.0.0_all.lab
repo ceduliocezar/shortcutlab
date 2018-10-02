@@ -1,0 +1,34 @@
+{
+   "platform":"Windows / Mac / GNU/Linux",
+   "software":"Custom Application",
+   "version":"1.0.0",
+   "shortcuts":[
+      {
+         "description":"Copy",
+         "keys":[
+            "Control",
+            "C"
+         ]
+      },
+      {
+         "description":"Paste",
+         "keys":[
+            "Control",
+            "V"
+         ]
+      },
+      {
+         "description":"Cut",
+         "keys":[
+            "Control",
+            "X"
+         ]
+      },
+      {
+         "description":"Help",
+         "keys":[
+            "F1"
+         ]
+      }
+   ]
+}
