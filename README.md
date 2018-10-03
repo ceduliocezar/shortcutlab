@@ -8,7 +8,7 @@ Open source and free application for training shortcuts for all applications of 
 
 ## Getting Started
 
-This application can be accessed on [http://ceduliocezar.com/shortcutlab/](http://ceduliocezar.com/shortcutlab/)
+This application can be accessed on [http://www.shortcutlab.space/](http://www.shortcutlab.space/)
 
 - Clone this repo on using Git or simply download it as zip file.
 
