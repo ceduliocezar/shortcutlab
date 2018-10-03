@@ -26,7 +26,7 @@ redirectToHTTPSIfNecessary();
 
 function redirectToHTTPSIfNecessary() {
     var host = "shortcutlab.space";
-    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+    if ((window.location.host.includes(host)) && (window.location.protocol != "https:")) {
         window.location.protocol = "https";
     }
 }
