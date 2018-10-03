@@ -22,6 +22,16 @@ window.addEventListener("keyup", function (event) {
     event.preventDefault();
 });
 
+redirectToHTTPSIfNecessary();
+
+function redirectToHTTPSIfNecessary() {
+    var host = "shortcutlab.space";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+        window.location.protocol = "https";
+    }
+}
+
+
 function displayNextShortcut() {
     console.log(`displayNextShortcut: current index ${currentShortcutIndex}`);
     currentShortcutIndex = currentShortcutIndex + 1;
@@ -98,12 +108,12 @@ function displaySelectionView() {
     document.getElementsByClassName("lab-session-container")[0].style.display = "none";
     document.getElementById('labs-loader').style.display = "block";
 
-    
+
 
     requestRecursive('https://api.github.com/repos/ceduliocezar/shortcutlab/contents/labs/', displayLabsForSelection);
 }
 
-function removeAllLabsFromList(){
+function removeAllLabsFromList() {
     var labList = document.getElementById("lab-list-container");
 
     while (labList.hasChildNodes()) {
@@ -138,9 +148,9 @@ function hideSelectionView() {
 function displayLabsForSelection(data) {
     removeAllLabsFromList();
     console.log('displayLabsForSelection: ' + JSON.stringify(data));
-    
+
     var labList = document.getElementById("lab-list-container");
-    
+
     for (const labKey in data) {
         if (data.hasOwnProperty(labKey)) {
             const lab = data[labKey];
