@@ -95,9 +95,20 @@ function displaySelectionView() {
     document.getElementsByClassName("intro-container")[0].style.display = "none";
     document.getElementsByClassName("content")[0].style.display = "block";
     document.getElementsByClassName("lab-selection-container")[0].style.display = "block";
+    document.getElementsByClassName("lab-session-container")[0].style.display = "none";
     document.getElementById('labs-loader').style.display = "block";
 
+    
+
     requestRecursive('https://api.github.com/repos/ceduliocezar/shortcutlab/contents/labs/', displayLabsForSelection);
+}
+
+function removeAllLabsFromList(){
+    var labList = document.getElementById("lab-list-container");
+
+    while (labList.hasChildNodes()) {
+        labList.removeChild(labList.lastChild);
+    }
 }
 
 function displayLabSessionView() {
@@ -119,22 +130,24 @@ function hideLoadingContainer() {
     document.getElementsByClassName("lab-loading-container")[0].style.display = "none";
 }
 
-function hideSelectionView(){
+function hideSelectionView() {
     console.log("hideSelectionView");
     document.getElementsByClassName("lab-loading-container")[0].style.display = "none";
 }
 
 function displayLabsForSelection(data) {
-
+    removeAllLabsFromList();
     console.log('displayLabsForSelection: ' + JSON.stringify(data));
+    
     var labList = document.getElementById("lab-list-container");
-
+    
     for (const labKey in data) {
         if (data.hasOwnProperty(labKey)) {
             const lab = data[labKey];
 
             let liElement = document.createElement("li");
             let aElement = document.createElement("a");
+            aElement.classList.add("list-description");
             aElement.innerHTML = lab.name;
             aElement.setAttribute('href', '#');
             aElement.setAttribute('onclick', "loadLab('" + lab.url + "');return false;");
@@ -144,5 +157,30 @@ function displayLabsForSelection(data) {
     }
 
     document.getElementById('labs-loader').style.display = "none";
+}
+
+function openFileSelector() {
+    console.log("openFileSelector");
+    var input = document.createElement("input");
+
+    input.type = "file";
+    input.accept = ".lab";
+    input.addEventListener("change", function (event) {
+        readFile(event.target.files[0]);
+    });
+
+    input.click();
+}
+
+function readFile(file) {
+    console.log("readFile");
+    var reader = new FileReader();
+    reader.onload = function (event) {
+        // The file's text will be printed here
+        var fileLab = JSON.parse(event.target.result);
+        onLoadLab(fileLab);
+    };
+
+    reader.readAsText(file);
 }
 

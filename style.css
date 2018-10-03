@@ -13,6 +13,10 @@
     
 }
 
+.app-name a {
+    text-decoration: none;
+}
+
 .lab-info {
     font-family: 'Montserrat', Helvetica, sans-serif;
     font-size:12pt;
@@ -165,8 +169,54 @@ p {
   .selection-title {
     width: 100%;
     margin: auto;
-    margin-bottom: 5vh;
     text-align: center;
     font-size: 30pt;
     color: #424242;
+  }
+
+  .upload-item {
+      color: #48acf0;
+  }
+
+  .upload {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: #48acf0;
+}
+
+li {
+    border-bottom: 1px solid #ccc;
+  }
+   
+  li:last-child {
+    border: none;
+  }
+   
+  li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+   
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+  }
+   
+  li a:hover {
+    font-size: 20px;
+    background: #f6f6f6;
+  }
+
+  .lab-list-containter {
+        width: 90%;
+        list-style: none;
+  }
+
+  .list-description {
+      width: 100%;
+      margin: 10px;   
   }
