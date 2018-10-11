@@ -6,7 +6,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126965546-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-126965546-1');
@@ -29,14 +29,11 @@
         <h2 class="welcome-subtitle">Practice your favorite tools shortcuts</h2>
 
         <a class="next-button" href="#" onclick="displaySelectionView();return false;">
-            <svg  width="50" height="50" viewBox="0 0 13.229166 13.229167"
-                inkscape:version="0.92.3 (d244b95, 2018-08-02)" >
-                <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-283.77082)">
-                    <circle style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:0.27749103;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                        id="path815" cx="6.6145835" cy="290.38541" r="6.4758377" />
-                    <path style="fill:none;stroke:#a9a9a9;stroke-width:0.26458332px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-                        d="m 4.8671137,294.07657 3.62621,-3.62621 -3.756139,-3.75613" id="path4534"
-                        inkscape:connector-curvature="0" />
+            <svg viewBox="0 0 13.229166 13.229167" height="50" width="50">
+                <g transform="translate(0,-283.77082)" id="layer1">
+
+                    <circle r="5.7106271" cy="290.38541" cx="6.6145835" id="path905" style="opacity:1;fill:none;fill-opacity:1;stroke:#48acf0;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                    <path id="path911" d="m 4.9473523,293.65912 3.2461291,-3.19888 -3.2376632,-3.38598" style="fill:none;stroke:#48acf0;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
                 </g>
             </svg>
         </a>
@@ -68,6 +65,29 @@
             </ul>
         </div>
 
+        <div class="end-session-container">
+            <p class="lab-info"></p>
+            <p class="finish-title">You have finished your session ;)</p>
+            <p class="score"><span class="correct-score">0</span>/<span class="total-shortcuts">0</span></p>
+            <div class="buttons-container">
+                <a class="retry-button button" href="#" onclick="retryLab();return false;">
+
+                    <svg height="50" width="50" viewBox="0 0 50 50" y="0px" x="0px">
+
+                        <path id="path921" d="M 11.498871,8.4941782 H 7.1835489 c -1.6242529,0 -3.4797294,1.7867968 -3.4797294,3.4110498 v 26.086524 c 0,1.648474 1.8312554,3.514069 3.4797294,3.514069 H 33.799248 l -5.715591,-5.39509 5.715591,5.39509 -5.821853,5.386887"
+                            style="fill:none;stroke:#a800a8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+                        <path style="fill:none;stroke:#48acf0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+                            d="m 22.022604,3.1072918 -5.821853,5.3868865 5.715591,5.3950897 -5.715591,-5.3950897 h 26.6157 c 1.648474,0 3.47973,1.8655947 3.47973,3.5140687 v 26.086524 c 0,1.624253 -1.855477,3.41105 -3.47973,3.41105 H 38.50113"
+                            id="path932" /></svg>
+                </a>
+                <a class="finish-button button" href="#" onclick="finishSession();return false;">
+                    <svg height="50" width="50" viewBox="0 0 50.000003 50.000003" y="0px" x="0px">
+                        <circle r="22.5" cy="25" cx="25" id="path850" style="opacity:1;fill:none;fill-opacity:1;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                        <path id="path852" d="m 16.439014,24.280898 7.499826,8.598286 9.936807,-17.476199" style="fill:none;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="./scripts/script.js"></script>
