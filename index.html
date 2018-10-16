@@ -25,19 +25,21 @@
 <body>
 
     <div class="intro-container">
-        <h1 class="welcome-title">Welcome to <b class="app-name">shortcutlab!</b></h1>
-        <h2 class="welcome-subtitle">Practice your favorite tools shortcuts</h2>
 
-        <a class="next-button" href="#" onclick="displaySelectionView();return false;">
-            <svg viewBox="0 0 13.229166 13.229167" height="50" width="50">
-                <g transform="translate(0,-283.77082)" id="layer1">
+        <div class="logo-container">
+            <img class="logo" src="./logo.svg">
+        </div>
 
-                    <circle r="5.7106271" cy="290.38541" cx="6.6145835" id="path905" style="opacity:1;fill:none;fill-opacity:1;stroke:#48acf0;stroke-width:0.52916667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-                    <path id="path911" d="m 4.9473523,293.65912 3.2461291,-3.19888 -3.2376632,-3.38598" style="fill:none;stroke:#48acf0;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-                </g>
-            </svg>
+        <h1 class="welcome-title">Space to improve productivity</h1>
+        <h2 class="welcome-subtitle">Practice is the key to master anything. Train shortcuts of any application easily
+            with our pre defined labs or create your own.</h2>
+
+
+        <a class="start-link" href="#" onclick="displaySelectionView();return false;">
+            <div class="start-button">
+                Get started
+            </div>
         </a>
-
     </div>
 
     <div class="content">
@@ -89,6 +91,23 @@
             </div>
         </div>
     </div>
+
+    <footer>
+
+        <div class="footer-content">
+            <nav>
+                <div class="footer-section">Shortcutlab</div>
+                <a class="footer-link" href="./index.html">Home</a>
+                <a class="footer-link" href="./about.html">About</a>
+            </nav>
+            <nav>
+                <div class="footer-section">Learn and Contribute</div>
+                <a class="footer-link" href="https://github.com/ceduliocezar/shortcutlab#create-your-own-lab" target="_blank">How
+                    do I create my own lab?</a>
+                <a class="footer-link" target="_blank" href="https://github.com/ceduliocezar/shortcutlab">Source code</a>
+            </nav>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="./scripts/script.js"></script>
     <script type="text/javascript" src="./scripts/fetch-labs.js"></script>

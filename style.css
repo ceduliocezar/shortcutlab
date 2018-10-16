@@ -3,6 +3,20 @@
   font-family: "Montserrat", Helvetica, sans-serif;
 }
 
+.logo{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.logo-container{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+
 .app-name {
   font-size: 30pt;
   color: #48acf0;
@@ -25,7 +39,7 @@
 }
 
 body {
-  background-color: #f2f4f8;
+  background-color: #FFFFFF;
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
@@ -145,7 +159,6 @@ p {
 
 .intro-container {
   width: 100%;
-  padding-top: 20vh;
   margin: auto;
 }
 
@@ -154,22 +167,47 @@ p {
   margin: auto;
   text-align: center;
   font-size: 30pt;
-  color: #424242;
+  color: #554d56;
+  font-weight: 300;
 }
 
 .welcome-subtitle {
   width: 90%;
+  max-width: 1000px;
   margin: auto;
+  margin-top: 24px;
   text-align: center;
   font-size: 20pt;
-  color: #a9a9a9;
+  color: #979197;
+  font-weight: 300;
 }
 
-.next-button {
+.start-button{
+  background: #419bf9;
+  width: 90%;
+  height: 60px;
+  margin: auto;
+  margin-top: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 400px) {
+  .start-button{
+    width: 350px;  
+  }
+}
+
+
+.start-link {
   display: block;
-  height: 50px;
-  width: 50px;
-  margin: 5vh auto;
+  text-align: center;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .button {
@@ -258,4 +296,63 @@ li a:hover {
   font-family: "Montserrat", Helvetica, sans-serif;
   font-size: 30pt;
   text-align: center;
+}
+
+.footer-content{
+  margin: auto;
+  display: flex;
+}
+
+footer{
+  display: flex;
+  margin: auto;
+  margin-top: 180px;
+}
+
+.footer-link {
+  display: block;
+  text-align: left;
+  color: #9a9197;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-section{
+  color: #554d56;
+  font: 14px;
+}
+
+nav :first-child{
+  margin-bottom: 10px;
+}
+
+nav a{
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.about-title{
+  color: #554d56;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.about-container{
+  width: 100%;
+  margin: auto;
+}
+
+.about-description{
+  font-size: 18px;
+  color: #979197;
+  margin: auto;
+  margin-top: 25px;
+  width: 90%;
+  text-align: justify;
+  max-width: 600px;
 }
