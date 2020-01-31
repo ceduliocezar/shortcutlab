@@ -52,12 +52,13 @@ function printKeysPressedState() {
 
 function matchCombination() {
   var currentShortcut = selectedLab.shortcuts[currentShortcutIndex];
+  var userCombinationToDisplay = keysPressed.join(" + ")
 
   if (keysPressed.join(", ").toLowerCase() === currentShortcut.keys.join(", ").toLowerCase()) {
-    displayAsCorrect();
+    displayAsCorrect(userCombinationToDisplay);
     totalCorrectAnswers++;
   } else {
-    displayAsIncorrect();
+    displayAsIncorrect(userCombinationToDisplay);
   }
 }
 
@@ -71,41 +72,46 @@ function endLabSession() {
 
 function displayEndSessionView() {
   console.log('displayEndSessionView');
-  document.getElementsByClassName("lab-session-container")[0].style.display = "none";
+  document.getElementsByClassName("shortcut-challenge-input")[0].style.display = "none";
   document.getElementsByClassName("end-session-container")[0].style.display = "block";
 }
 
-function displayAsCorrect() {
+function displayAsCorrect(userCombination) {
   let li = document.createElement("li");
   li.classList.add("correct");
   li.classList.add("shortcut-item");
-  li.appendChild(createHistoryDescriptionItem());
-  li.appendChild(createHistoryCombinationItem());
+  li.appendChild(createHistoryDescriptionItem(false));
+  li.appendChild(createHistoryCombinationItem(userCombination));
   document.getElementsByClassName("shortcut-list")[0].prepend(li);
 }
 
-function displayAsIncorrect() {
+function displayAsIncorrect(userCombination) {
   let li = document.createElement("li");
   li.classList.add("incorrect");
   li.classList.add("shortcut-item");
-  li.appendChild(createHistoryDescriptionItem());
-  li.appendChild(createHistoryCombinationItem());
+  li.appendChild(createHistoryDescriptionItem(true));
+  li.appendChild(createHistoryCombinationItem(userCombination));
   document.getElementsByClassName("shortcut-list")[0].prepend(li);
 }
 
-function createHistoryDescriptionItem() {
+function createHistoryDescriptionItem(incorrect) {
   var currentShortcut = selectedLab.shortcuts[currentShortcutIndex];
 
   let descriptionElement = document.createElement("p");
   descriptionElement.innerHTML = currentShortcut.description;
+
+  if(incorrect){
+    descriptionElement.innerHTML = descriptionElement.innerHTML + " (" + currentShortcut.keys.join(" + ") + ")";
+  }
   descriptionElement.classList.add("history-item-description");
 
   return descriptionElement;
 }
-function createHistoryCombinationItem() {
+
+function createHistoryCombinationItem(userCombination) {
   var currentShortcut = selectedLab.shortcuts[currentShortcutIndex];
   let combinationElement = document.createElement("p");
-  combinationElement.innerHTML = currentShortcut.keys.join(" + ");
+  combinationElement.innerHTML = userCombination
   combinationElement.classList.add("history-item-combination");
 
   return combinationElement;
@@ -167,6 +173,7 @@ function displayLabsForSelection(data) {
       const lab = data[labKey];
 
       let liElement = document.createElement("li");
+      aElement.classList.add("list-description-container");
       let aElement = document.createElement("a");
       aElement.classList.add("list-description");
       aElement.innerHTML = lab.name;
@@ -220,6 +227,8 @@ function startLabSession(lab) {
   registerKeyListeners();
 
   displayLabSessionView();
+  document.getElementsByClassName("shortcut-challenge-input")[0].style.display = "block";
+
   selectedLab = lab;
   currentShortcutIndex = 0;
   displayShortcut(selectedLab.shortcuts[currentShortcutIndex]);

@@ -59,36 +59,37 @@
 
         <div class="lab-session-container">
             <p class="lab-info"></p>
-            <p class="shortcut-description"></p>
-            <p class="shortcut-category"></p>
-            <input type="text" class="shortcut-input" placeholder="Press the key combination" />
+            <div class="shortcut-challenge-input">
+                <p class="shortcut-description"></p>
+                <p class="shortcut-category"></p>
+                <input type="text" class="shortcut-input" placeholder="Press the key combination" />
+            </div>
+
+            <div class="end-session-container">
+                <p class="finish-title">You have finished your session ;)</p>
+                <p class="score"><span class="correct-score">0</span>/<span class="total-shortcuts">0</span></p>
+                <div class="buttons-container">
+                    <a class="retry-button button" href="#" onclick="retryLab();return false;">
+    
+                        <svg height="50" width="50" viewBox="0 0 50 50" y="0px" x="0px">
+    
+                            <path id="path921" d="M 11.498871,8.4941782 H 7.1835489 c -1.6242529,0 -3.4797294,1.7867968 -3.4797294,3.4110498 v 26.086524 c 0,1.648474 1.8312554,3.514069 3.4797294,3.514069 H 33.799248 l -5.715591,-5.39509 5.715591,5.39509 -5.821853,5.386887"
+                                style="fill:none;stroke:#a800a8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+                            <path style="fill:none;stroke:#48acf0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+                                d="m 22.022604,3.1072918 -5.821853,5.3868865 5.715591,5.3950897 -5.715591,-5.3950897 h 26.6157 c 1.648474,0 3.47973,1.8655947 3.47973,3.5140687 v 26.086524 c 0,1.624253 -1.855477,3.41105 -3.47973,3.41105 H 38.50113"
+                                id="path932" /></svg>
+                    </a>
+                    <a class="finish-button button" href="#" onclick="finishSession();return false;">
+                        <svg height="50" width="50" viewBox="0 0 50.000003 50.000003" y="0px" x="0px">
+                            <circle r="22.5" cy="25" cx="25" id="path850" style="opacity:1;fill:none;fill-opacity:1;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                            <path id="path852" d="m 16.439014,24.280898 7.499826,8.598286 9.936807,-17.476199" style="fill:none;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
             <ul class="shortcut-list">
             </ul>
-        </div>
-
-        <div class="end-session-container">
-            <p class="lab-info"></p>
-            <p class="finish-title">You have finished your session ;)</p>
-            <p class="score"><span class="correct-score">0</span>/<span class="total-shortcuts">0</span></p>
-            <div class="buttons-container">
-                <a class="retry-button button" href="#" onclick="retryLab();return false;">
-
-                    <svg height="50" width="50" viewBox="0 0 50 50" y="0px" x="0px">
-
-                        <path id="path921" d="M 11.498871,8.4941782 H 7.1835489 c -1.6242529,0 -3.4797294,1.7867968 -3.4797294,3.4110498 v 26.086524 c 0,1.648474 1.8312554,3.514069 3.4797294,3.514069 H 33.799248 l -5.715591,-5.39509 5.715591,5.39509 -5.821853,5.386887"
-                            style="fill:none;stroke:#a800a8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
-                        <path style="fill:none;stroke:#48acf0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-                            d="m 22.022604,3.1072918 -5.821853,5.3868865 5.715591,5.3950897 -5.715591,-5.3950897 h 26.6157 c 1.648474,0 3.47973,1.8655947 3.47973,3.5140687 v 26.086524 c 0,1.624253 -1.855477,3.41105 -3.47973,3.41105 H 38.50113"
-                            id="path932" /></svg>
-                </a>
-                <a class="finish-button button" href="#" onclick="finishSession();return false;">
-                    <svg height="50" width="50" viewBox="0 0 50.000003 50.000003" y="0px" x="0px">
-                        <circle r="22.5" cy="25" cx="25" id="path850" style="opacity:1;fill:none;fill-opacity:1;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-                        <path id="path852" d="m 16.439014,24.280898 7.499826,8.598286 9.936807,-17.476199" style="fill:none;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-                    </svg>
-                </a>
-            </div>
         </div>
     </div>
 
@@ -109,7 +110,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="./scripts/script.js"></script>
+    <script type="text/javascript" src="./scripts/training-engine.js"></script>
     <script type="text/javascript" src="./scripts/fetch-labs.js"></script>
 </body>
 

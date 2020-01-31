@@ -48,6 +48,16 @@ p {
   color: #424242;
 }
 
+.history-item-description {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 20pt;
+}
+
+.history-item-combination{
+  color: #48acf0;
+  font-weight: bold;
+}
+
 .shortcut-description {
   font-family: "Montserrat", Helvetica, sans-serif;
   font-size: 30pt;
@@ -146,6 +156,7 @@ p {
 .end-session-container {
   display: none;
   text-align: center;
+  margin-top: 10vh;
 }
 
 .lab-loading-container {
@@ -241,7 +252,7 @@ li {
   border-bottom: 1px solid #ccc;
 }
 
-li:last-child {
+ul li.list-description-container:last-child {
   border: none;
 }
 
