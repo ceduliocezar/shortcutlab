@@ -47,12 +47,12 @@ function displayShortcut(shortcut) {
 
 function printKeysPressedState() {
   console.log("printKeysPressedState: " + keysPressed);
-  document.getElementsByClassName("shortcut-input")[0].value = keysPressed.join(" + ");
+  document.getElementsByClassName("shortcut-input")[0].value = keysPressed.join(" + ").toUpperCase();
 }
 
 function matchCombination() {
   var currentShortcut = selectedLab.shortcuts[currentShortcutIndex];
-  var userCombinationToDisplay = keysPressed.join(" + ")
+  var userCombinationToDisplay = keysPressed.join(" + ").toUpperCase()
 
   if (keysPressed.join(", ").toLowerCase() === currentShortcut.keys.join(", ").toLowerCase()) {
     displayAsCorrect(userCombinationToDisplay);

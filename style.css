@@ -72,13 +72,14 @@ p {
 .shortcut-input {
   font-family: "Montserrat", Helvetica, sans-serif;
   font-size: 30pt;
-  pointer-events: none;
   width: 100%;
+  min-height: 50pt;
   box-sizing: border-box;
   margin-top: 20pt;
   color: #48acf0;
   padding-left: 20pt;
   padding-right: 20pt;
+  border-radius: 5pt;
 }
 
 .shortcut-input::placeholder {
@@ -122,6 +123,7 @@ p {
   margin: 20pt 0 0 0;
   border-radius: 5pt;
   padding: 10pt;
+  min-height: 30pt;
 }
 
 .loader {
