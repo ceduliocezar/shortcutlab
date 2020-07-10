@@ -88,14 +88,14 @@ p {
   border-width: 0.5px;
   border-style: solid;
   border-color: #b80c09;
-  background: #ffffff;
+  background: #b80c091c;
 }
 
 .correct {
   border-width: 0.5px;
   border-style: solid;
   border-color: #7be0ad;
-  background: #ffffff;
+  background: #7be0ad7c;
 }
 
 @media screen and (min-width: 600px) {
