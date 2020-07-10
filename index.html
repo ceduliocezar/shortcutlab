@@ -3,7 +3,7 @@
 
 <head>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126965546-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126965546-1"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -18,9 +18,9 @@
     <meta name="google-site-verification" content="8iXxt7E516gE1A1Tdk40yLv1jM8O7PNq8-Zf9EeJqU4" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Be efficient at work mastering shortcuts of your favorite software</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="normalize-8.0.1.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize-8.0.1.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:normal,bold" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,12 +28,11 @@
     <div class="intro-container">
 
         <div class="logo-container">
-            <img class="logo" src="./logo.svg">
+            <img class="logo" src="./img/logo.svg">
         </div>
 
-        <h1 class="welcome-title">Space to improve productivity</h1>
-        <h2 class="welcome-subtitle">Practice is the key to master anything. Train shortcuts of any application easily
-            with our pre defined labs or create your own.</h2>
+        <h1 class="welcome-title">shortcutlab</h1>
+        <h2 class="welcome-subtitle">Practice shortcuts and commands of any application</h2>
 
 
         <a class="start-link" href="#" onclick="displaySelectionView();return false;">
@@ -44,12 +43,10 @@
     </div>
 
     <div class="content">
-
-        <p class="app-name"><a class="app-name" href="#" onclick="displaySelectionView();return false;">shortcutlab</a></p>
-
         <div class="lab-selection-container">
-            <p class="selection-title"><b>Select</b> a lab to begin</p>
-            <p class="upload"><a class="upload-item" href="#" onclick="openFileSelector();return false;">or upload</a></p>
+            <p class="upload"><a class="upload-item" href="./index.html">Close</a></p>
+            <p class="selection-title">Select a lab</p>
+            <p class="upload"><a class="upload-item" href="#" onclick="openFileSelector();return false;">or upload one</a></p>
             <div class="loader" id="labs-loader"></div>
             <ul class="lab-list-containter" id="lab-list-container"></ul>
         </div>
@@ -111,8 +108,8 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="./scripts/training-engine.js"></script>
-    <script type="text/javascript" src="./scripts/fetch-labs.js"></script>
+    <script type="text/javascript" src="./js/training-engine.js"></script>
+    <script type="text/javascript" src="./js/fetch-labs.js"></script>
 </body>
 
 </html>

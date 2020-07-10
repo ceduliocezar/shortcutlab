@@ -124,6 +124,7 @@ function displaySelectionView() {
   document.getElementsByClassName("content")[0].style.display = "block";
   document.getElementsByClassName("lab-selection-container")[0].style.display = "block";
   document.getElementsByClassName("lab-session-container")[0].style.display = "none";
+  document.getElementsByClassName("footer-content")[0].style.display = "none";
   document.getElementById("labs-loader").style.display = "block";
 
   loadLabsFromAPI(labsAPIURL);
@@ -173,15 +174,20 @@ function displayLabsForSelection(data) {
       const lab = data[labKey];
 
       let liElement = document.createElement("li");
-      aElement.classList.add("list-description-container");
+      liElement.classList.add("list-description-container");
+      
       let aElement = document.createElement("a");
-      aElement.classList.add("list-description");
-      aElement.innerHTML = lab.name;
+      aElement.classList.add("list-description-link");
       aElement.setAttribute("href", "#");
       aElement.setAttribute(
         "onclick",
         "loadLab('" + lab.url + "');return false;"
       );
+
+      let pElement = document.createElement("p");
+      pElement.classList.add("list-description");
+      pElement.innerText = lab.name;
+      aElement.appendChild(pElement);
       liElement.appendChild(aElement);
       labList.appendChild(liElement);
     }
