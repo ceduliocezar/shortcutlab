@@ -1,0 +1,127 @@
+{
+   "platform":"Windows",
+   "software":"Office",
+   "version":"",
+   "shortcuts":[
+      {
+         "description":"Open a document",
+         "keys":[
+            "Control",
+            "O"
+         ]
+      },
+      {
+         "description":"Save the document",
+         "keys":[
+            "Control",
+            "S"
+         ]
+      },
+      {
+         "description":"Cut the selected content to the Clipboard",
+         "keys":[
+            "Control",
+            "X"
+         ]
+      },
+      {
+         "description":"Paste the contents of the Clipboard",
+         "keys":[
+            "Control",
+            "V"
+         ]
+      },
+      {
+         "description":"Select all document content",
+         "keys":[
+            "Control",
+            "A"
+         ]
+      },
+      {
+         "description":"Apply bold formatting to text",
+         "keys":[
+            "Control",
+            "B"
+         ]
+      },
+      {
+         "description":"Apply italic formatting to text",
+         "keys":[
+            "Control",
+            "I"
+         ]
+      },
+      {
+         "description":"Apply underline formatting to text",
+         "keys":[
+            "Control",
+            "U"
+         ]
+      },
+      {
+         "description":"Decrease the font size by 1 point",
+         "keys":[
+            "Control",
+            "["
+         ]
+      },
+      {
+         "description":"Increase the font size by 1 point",
+         "keys":[
+            "Control",
+            "]"
+         ]
+      },
+      {
+         "description":"Align the text to the left",
+         "keys":[
+            "Control",
+            "L"
+         ]
+      },
+      {
+         "description":"Align the text to the right",
+         "keys":[
+            "Control",
+            "R"
+         ]
+      },
+      {
+         "description":"Cancel a command",
+         "keys":[
+            "Escape"
+         ]
+      },
+      {
+         "description":"Undo the previous action",
+         "keys":[
+            "Control",
+            "Z"
+         ]
+      },
+      {
+         "description":"Redo the previous action, if possible",
+         "keys":[
+            "Control",
+            "Y"
+         ]
+      },
+      {
+         "description":"Split the document window",
+         "keys":[
+            "Control",
+            "Alt",
+            "S"
+         ]
+      },
+      {
+         "description":"Remove the document window split",
+         "keys":[
+            "Alt",
+            "Shift",
+            "C"
+         ]
+      }
+   ]
+}

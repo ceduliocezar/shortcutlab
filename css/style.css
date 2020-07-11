@@ -67,21 +67,15 @@ p {
   font-size: 30pt;
 }
 
-.shortcut-category {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  font-size: 18pt;
-  color: #a9a9a9;
-}
-
 .shortcut-input {
   font-family: "Montserrat", Helvetica, sans-serif;
-  font-size: 30pt;
+  font-size: 25pt;
   width: 100%;
   min-height: 50pt;
   box-sizing: border-box;
   margin-top: 20pt;
   color: #48acf0;
-  padding-left: 20pt;
+  padding-left: 10pt;
   padding-right: 20pt;
   border-radius: 5pt;
 }
@@ -98,16 +92,10 @@ p {
 }
 
 .incorrect {
-  border-width: 0.5px;
-  border-style: solid;
-  border-color: #b80c09;
   background: #b80c091c;
 }
 
 .correct {
-  border-width: 0.5px;
-  border-style: solid;
-  border-color: #7be0ad;
   background: #7be0ad7c;
 }
 
@@ -166,7 +154,8 @@ p {
 .end-session-container {
   display: none;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 20px;
   background-color: #DAF0FB;
   border-radius: 10px;
@@ -215,7 +204,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .start-link {
@@ -256,6 +245,7 @@ p {
   width: 100%;
   height: 100%;
   text-decoration: none;
+  display: inline-block;
 }
 
 .list-description {
@@ -408,4 +398,12 @@ nav {
 
 .shortcut-challenge-input{
   margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #DAF0FB;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.incorrect-user-combination{
+  color: #b80c09; 
 }

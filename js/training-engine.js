@@ -34,7 +34,6 @@ function displayShortcut(shortcut) {
   var category = shortcut.category === undefined ? "General" : shortcut.category;
 
   document.getElementsByClassName("shortcut-description")[0].innerHTML = description;
-  document.getElementsByClassName("shortcut-category")[0].innerHTML = category;
 
   var elements = document.getElementsByClassName("lab-info");
   for (var i = 0; i < elements.length; i++) {
@@ -95,7 +94,9 @@ function displayAsIncorrect(userCombination) {
   li.classList.add("incorrect");
   li.classList.add("shortcut-item");
   li.appendChild(createHistoryDescriptionItem(true));
-  li.appendChild(createHistoryCombinationItem(userCombination));
+  var userCombinationElement = createHistoryCombinationItem(userCombination)
+  userCombinationElement.classList.add("incorrect-user-combination")
+  li.appendChild(userCombinationElement);
   document.getElementsByClassName("shortcut-list")[0].prepend(li);
 }
 
@@ -122,8 +123,8 @@ function createHistoryCombinationItem(userCombination) {
   return combinationElement;
 }
 
-function displaySelectionView() {
-  console.log("displaySelectionView: ");
+function startSelectionView() {
+  console.log("startSelectionView: ");
   hideEndSessionView();
   document.getElementsByClassName("intro-container")[0].style.display = "none";
   document.getElementsByClassName("content")[0].style.display = "block";
@@ -305,7 +306,7 @@ function retryLab() {
 }
 
 function finishSession() {
-  displaySelectionView();
+  startSelectionView();
 }
 
 function clearShortcutHistory() {
