@@ -1,5 +1,5 @@
 
-function loadLabsFromAPI(url){
+function loadLabsFromAPI(url) {
   requestRecursive(url);
 }
 

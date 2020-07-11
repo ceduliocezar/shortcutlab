@@ -31,18 +31,22 @@ function displayNextShortcut() {
 function displayShortcut(shortcut) {
   console.log(`displayShortcut: shortcut ${JSON.stringify(shortcut)}`);
   var description = shortcut.description;
-  var category =
-    shortcut.category === undefined ? "General" : shortcut.category;
-  var labInfo = `${selectedLab.software} - ${selectedLab.version} - ${selectedLab.platform}`;
+  var category = shortcut.category === undefined ? "General" : shortcut.category;
 
   document.getElementsByClassName("shortcut-description")[0].innerHTML = description;
   document.getElementsByClassName("shortcut-category")[0].innerHTML = category;
 
   var elements = document.getElementsByClassName("lab-info");
   for (var i = 0; i < elements.length; i++) {
-    elements[i].innerHTML = labInfo;
+    elements[i].innerHTML = selectedLab.software;
   }
 
+  var labVersion = `${selectedLab.version} ${selectedLab.platform}`;
+
+  elements = document.getElementsByClassName("lab-info-version")
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = labVersion;
+  }
 }
 
 function printKeysPressedState() {
@@ -66,6 +70,7 @@ function endLabSession() {
   console.log('endLabSession');
   unregisterKeyListeners();
   displayEndSessionView();
+  document.getElementsByClassName("retry-button")[0].style.display = "inline-block"
   document.getElementsByClassName("correct-score")[0].innerHTML = totalCorrectAnswers;
   document.getElementsByClassName("total-shortcuts")[0].innerHTML = selectedLab.shortcuts.length;
 }
@@ -100,7 +105,7 @@ function createHistoryDescriptionItem(incorrect) {
   let descriptionElement = document.createElement("p");
   descriptionElement.innerHTML = currentShortcut.description;
 
-  if(incorrect){
+  if (incorrect) {
     descriptionElement.innerHTML = descriptionElement.innerHTML + " (" + currentShortcut.keys.join(" + ") + ")";
   }
   descriptionElement.classList.add("history-item-description");
@@ -146,6 +151,7 @@ function displayLabSessionView() {
   hideEndSessionView();
   document.getElementsByClassName("intro-container")[0].style.display = "none";
   document.getElementsByClassName("lab-selection-container")[0].style.display = "none";
+  document.getElementsByClassName("retry-button")[0].style.display = "none"
 }
 
 function displayLoadingContainer() {
@@ -175,7 +181,7 @@ function displayLabsForSelection(data) {
 
       let liElement = document.createElement("li");
       liElement.classList.add("list-description-container");
-      
+
       let aElement = document.createElement("a");
       aElement.classList.add("list-description-link");
       aElement.setAttribute("href", "#");

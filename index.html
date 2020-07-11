@@ -14,7 +14,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simple application that enables you to train shortcuts of your favorite software, by using pre defined training sessions or creating your own.">
+    <meta name="description"
+        content="Simple application that enables you to train shortcuts of your favorite software, by using pre defined training sessions or creating your own.">
     <meta name="google-site-verification" content="8iXxt7E516gE1A1Tdk40yLv1jM8O7PNq8-Zf9EeJqU4" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Be efficient at work mastering shortcuts of your favorite software</title>
@@ -44,11 +45,16 @@
 
     <div class="content">
         <div class="lab-selection-container">
-            <p class="upload"><a class="upload-item" href="./index.html">Close</a></p>
-            <p class="selection-title">Select a lab</p>
-            <p class="upload"><a class="upload-item" href="#" onclick="openFileSelector();return false;">or upload one</a></p>
+            <div class="buttons-container">
+                <a class="button-link close-button" href="./index.html">
+                </a>
+            </div>
+
+            <p class="page-title selection-title">Select a lab</p>
+            <p class="upload"><a class="upload-item" href="#" onclick="openFileSelector();return false;">or upload
+                    one</a></p>
             <div class="loader" id="labs-loader"></div>
-            <ul class="lab-list-containter" id="lab-list-container"></ul>
+            <ul class="lab-list-container" id="lab-list-container"></ul>
         </div>
 
         <div class="lab-loading-container">
@@ -56,7 +62,14 @@
         </div>
 
         <div class="lab-session-container">
-            <p class="lab-info"></p>
+            <div class="buttons-container">
+                <a class="button-link close-button" href="./index.html">
+                </a>
+                <a class="button-link retry-button" href="#" onclick="retryLab();return false;">
+                </a>
+            </div>
+            <p class="page-title lab-info"></p>
+            <p class="lab-info-version">v1.0.0 - GNU/Linux</p>
             <div class="shortcut-challenge-input">
                 <p class="shortcut-description"></p>
                 <p class="shortcut-category"></p>
@@ -66,24 +79,6 @@
             <div class="end-session-container">
                 <p class="finish-title">You have finished your session ;)</p>
                 <p class="score"><span class="correct-score">0</span>/<span class="total-shortcuts">0</span></p>
-                <div class="buttons-container">
-                    <a class="retry-button button" href="#" onclick="retryLab();return false;">
-    
-                        <svg height="50" width="50" viewBox="0 0 50 50" y="0px" x="0px">
-    
-                            <path id="path921" d="M 11.498871,8.4941782 H 7.1835489 c -1.6242529,0 -3.4797294,1.7867968 -3.4797294,3.4110498 v 26.086524 c 0,1.648474 1.8312554,3.514069 3.4797294,3.514069 H 33.799248 l -5.715591,-5.39509 5.715591,5.39509 -5.821853,5.386887"
-                                style="fill:none;stroke:#a800a8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
-                            <path style="fill:none;stroke:#48acf0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-                                d="m 22.022604,3.1072918 -5.821853,5.3868865 5.715591,5.3950897 -5.715591,-5.3950897 h 26.6157 c 1.648474,0 3.47973,1.8655947 3.47973,3.5140687 v 26.086524 c 0,1.624253 -1.855477,3.41105 -3.47973,3.41105 H 38.50113"
-                                id="path932" /></svg>
-                    </a>
-                    <a class="finish-button button" href="#" onclick="finishSession();return false;">
-                        <svg height="50" width="50" viewBox="0 0 50.000003 50.000003" y="0px" x="0px">
-                            <circle r="22.5" cy="25" cx="25" id="path850" style="opacity:1;fill:none;fill-opacity:1;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-                            <path id="path852" d="m 16.439014,24.280898 7.499826,8.598286 9.936807,-17.476199" style="fill:none;stroke:#3db39e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-                        </svg>
-                    </a>
-                </div>
             </div>
 
             <ul class="shortcut-list">
@@ -101,9 +96,11 @@
             </nav>
             <nav>
                 <div class="footer-section">Learn and Contribute</div>
-                <a class="footer-link" href="https://github.com/ceduliocezar/shortcutlab#create-your-own-lab" target="_blank">How
+                <a class="footer-link" href="https://github.com/ceduliocezar/shortcutlab#create-your-own-lab"
+                    target="_blank">How
                     do I create my own lab?</a>
-                <a class="footer-link" target="_blank" href="https://github.com/ceduliocezar/shortcutlab">Source code</a>
+                <a class="footer-link" target="_blank" href="https://github.com/ceduliocezar/shortcutlab">Source
+                    code</a>
             </nav>
         </div>
     </footer>
