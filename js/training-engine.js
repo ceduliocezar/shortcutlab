@@ -31,18 +31,21 @@ function displayNextShortcut() {
 function displayShortcut(shortcut) {
   console.log(`displayShortcut: shortcut ${JSON.stringify(shortcut)}`);
   var description = shortcut.description;
-  var category =
-    shortcut.category === undefined ? "General" : shortcut.category;
-  var labInfo = `${selectedLab.software} - ${selectedLab.version} - ${selectedLab.platform}`;
+  var category = shortcut.category === undefined ? "General" : shortcut.category;
 
   document.getElementsByClassName("shortcut-description")[0].innerHTML = description;
-  document.getElementsByClassName("shortcut-category")[0].innerHTML = category;
 
   var elements = document.getElementsByClassName("lab-info");
   for (var i = 0; i < elements.length; i++) {
-    elements[i].innerHTML = labInfo;
+    elements[i].innerHTML = selectedLab.software;
   }
 
+  var labVersion = `${selectedLab.version} ${selectedLab.platform}`;
+
+  elements = document.getElementsByClassName("lab-info-version")
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = labVersion;
+  }
 }
 
 function printKeysPressedState() {
@@ -66,6 +69,7 @@ function endLabSession() {
   console.log('endLabSession');
   unregisterKeyListeners();
   displayEndSessionView();
+  document.getElementsByClassName("retry-button")[0].style.display = "inline-block"
   document.getElementsByClassName("correct-score")[0].innerHTML = totalCorrectAnswers;
   document.getElementsByClassName("total-shortcuts")[0].innerHTML = selectedLab.shortcuts.length;
 }
@@ -90,7 +94,9 @@ function displayAsIncorrect(userCombination) {
   li.classList.add("incorrect");
   li.classList.add("shortcut-item");
   li.appendChild(createHistoryDescriptionItem(true));
-  li.appendChild(createHistoryCombinationItem(userCombination));
+  var userCombinationElement = createHistoryCombinationItem(userCombination)
+  userCombinationElement.classList.add("incorrect-user-combination")
+  li.appendChild(userCombinationElement);
   document.getElementsByClassName("shortcut-list")[0].prepend(li);
 }
 
@@ -100,7 +106,7 @@ function createHistoryDescriptionItem(incorrect) {
   let descriptionElement = document.createElement("p");
   descriptionElement.innerHTML = currentShortcut.description;
 
-  if(incorrect){
+  if (incorrect) {
     descriptionElement.innerHTML = descriptionElement.innerHTML + " (" + currentShortcut.keys.join(" + ") + ")";
   }
   descriptionElement.classList.add("history-item-description");
@@ -117,13 +123,14 @@ function createHistoryCombinationItem(userCombination) {
   return combinationElement;
 }
 
-function displaySelectionView() {
-  console.log("displaySelectionView: ");
+function startSelectionView() {
+  console.log("startSelectionView: ");
   hideEndSessionView();
   document.getElementsByClassName("intro-container")[0].style.display = "none";
   document.getElementsByClassName("content")[0].style.display = "block";
   document.getElementsByClassName("lab-selection-container")[0].style.display = "block";
   document.getElementsByClassName("lab-session-container")[0].style.display = "none";
+  document.getElementsByClassName("footer-content")[0].style.display = "none";
   document.getElementById("labs-loader").style.display = "block";
 
   loadLabsFromAPI(labsAPIURL);
@@ -145,6 +152,7 @@ function displayLabSessionView() {
   hideEndSessionView();
   document.getElementsByClassName("intro-container")[0].style.display = "none";
   document.getElementsByClassName("lab-selection-container")[0].style.display = "none";
+  document.getElementsByClassName("retry-button")[0].style.display = "none"
 }
 
 function displayLoadingContainer() {
@@ -173,15 +181,20 @@ function displayLabsForSelection(data) {
       const lab = data[labKey];
 
       let liElement = document.createElement("li");
-      aElement.classList.add("list-description-container");
+      liElement.classList.add("list-description-container");
+
       let aElement = document.createElement("a");
-      aElement.classList.add("list-description");
-      aElement.innerHTML = lab.name;
+      aElement.classList.add("list-description-link");
       aElement.setAttribute("href", "#");
       aElement.setAttribute(
         "onclick",
         "loadLab('" + lab.url + "');return false;"
       );
+
+      let pElement = document.createElement("p");
+      pElement.classList.add("list-description");
+      pElement.innerText = lab.name;
+      aElement.appendChild(pElement);
       liElement.appendChild(aElement);
       labList.appendChild(liElement);
     }
@@ -293,7 +306,7 @@ function retryLab() {
 }
 
 function finishSession() {
-  displaySelectionView();
+  startSelectionView();
 }
 
 function clearShortcutHistory() {
