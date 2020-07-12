@@ -1,0 +1,85 @@
+{
+   "platform":"Windows",
+   "software":"Firefox",
+   "version":"78",
+   "shortcuts":[
+      {
+         "description":"Focus Next Link or Input Field ",
+         "keys":[
+            "TAB"
+         ]
+      },
+      {
+         "description":"Focus Previous Link or Input Field ",
+         "keys":[
+            "SHIFT",
+            "TAB"
+         ]
+      },
+      {
+         "description":"Go Down a Screen ",
+         "keys":[
+            "PAGEDOWN"
+         ]
+      },
+      {
+         "description":"Go Up a Screen ",
+         "keys":[
+            "PAGEUP"
+         ]
+      },
+      {
+         "description":"Go to Bottom of Page ",
+         "keys":[
+            "END"
+         ]
+      },
+      {
+         "description":"Go to Top of Page",
+         "keys":[
+            "HOME"
+         ]
+      },
+      {
+         "description":"Move to Next Frame ",
+         "keys":[
+            "F6"
+         ]
+      },
+      {
+         "description":"Print",
+         "keys":[
+            "CONTROL",
+            "P"
+         ]
+      },
+      {
+         "description":"Save Page As",
+         "keys":[
+            "CONTROL",
+            "S"
+         ]
+      },
+      {
+         "description":"Zoom In",
+         "keys":[
+            "CONTROL",
+            "+"
+         ]
+      },
+      {
+         "description":"Zoom Out",
+         "keys":[
+            "CONTROL",
+            "-"
+         ]
+      },
+      {
+         "description":"Zoom Reset",
+         "keys":[
+            "CONTROL",
+            "0"
+         ]
+      }
+   ]
+}

@@ -50,7 +50,15 @@ function displayShortcut(shortcut) {
 
 function printKeysPressedState() {
   console.log("printKeysPressedState: " + keysPressed);
-  document.getElementsByClassName("shortcut-input")[0].value = keysPressed.join(" + ").toUpperCase();
+
+  var inputElement = document.getElementsByClassName("shortcut-input")[0]
+  if (keysPressed.length > 0) {
+    inputElement.innerHTML = keysPressed.join(" + ").toUpperCase();
+    inputElement.classList.remove("shortcut-input-hint");
+  } else {
+    document.getElementsByClassName("shortcut-input")[0].innerHTML = "Press the key combination"
+    inputElement.classList.add("shortcut-input-hint");
+  }
 }
 
 function matchCombination() {

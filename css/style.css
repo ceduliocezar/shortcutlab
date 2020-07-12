@@ -68,16 +68,21 @@ p {
 }
 
 .shortcut-input {
-  font-family: "Montserrat", Helvetica, sans-serif;
   font-size: 25pt;
-  width: 100%;
-  min-height: 50pt;
-  box-sizing: border-box;
-  margin-top: 20pt;
   color: #48acf0;
-  padding-left: 10pt;
-  padding-right: 20pt;
-  border-radius: 5pt;
+}
+
+.shortcut-input-hint {
+  color: #a9a9a9;
+}
+
+.shortcut-input-container {
+  margin-top: 20px;
+  background-color: #FFF;
+  padding-left: 10px;
+  padding-right: 20px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .shortcut-input::placeholder {

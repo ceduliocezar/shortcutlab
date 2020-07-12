@@ -1,0 +1,117 @@
+{
+   "platform":"Windows",
+   "software":"Firefox",
+   "version":"78",
+   "shortcuts":[
+      {
+         "description":"Copy",
+         "keys":[
+            "CONTROL",
+            "C"
+         ]
+      },
+      {
+         "description":"Cut",
+         "keys":[
+            "CONTROL",
+            "X"
+         ]
+      },
+      {
+         "description":"Delete",
+         "keys":[
+            "DELETE"
+         ]
+      },
+      {
+         "description":"Delete Word to the Left",
+         "keys":[
+            "CONTROL",
+            "BACKSPACE"
+         ]
+      },
+      {
+         "description":"Delete Word to the Right",
+         "keys":[
+            "CONTROL",
+            "DELETE"
+         ]
+      },
+      {
+         "description":"Go one Word to the Left",
+         "keys":[
+            "CONTROL",
+            "ARROWLEFT"
+         ]
+      },
+      {
+         "description":"Go one Word to the Right",
+         "keys":[
+            "CONTROL",
+            "ARROWRIGHT"
+         ]
+      },
+      {
+         "description":"Go to Beginning of Line",
+         "keys":[
+            "HOME"
+         ]
+      },
+      {
+         "description":"Go to End of Line",
+         "keys":[
+            "END"
+         ]
+      },
+      {
+         "description":"Go to Beginning of Text",
+         "keys":[
+            "CONTROL",
+            "HOME"
+         ]
+      },
+      {
+         "description":"Go to End of Text",
+         "keys":[
+            "CONTROL",
+            "END"
+         ]
+      },
+      {
+         "description":"Paste",
+         "keys":[
+            "CONTROL",
+            "V"
+         ]
+      },
+      {
+         "description":"Paste (as plain text) ",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "V"
+         ]
+      },
+      {
+         "description":"Redo",
+         "keys":[
+            "CONTROL",
+            "Y"
+         ]
+      },
+      {
+         "description":"Select All",
+         "keys":[
+            "CONTROL",
+            "A"
+         ]
+      },
+      {
+         "description":"Undo",
+         "keys":[
+            "CONTROL",
+            "Z"
+         ]
+      }
+   ]
+}
