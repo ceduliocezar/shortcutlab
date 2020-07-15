@@ -1,15 +1,10 @@
 {
+   "description":"General keyboard shortcuts for Visual Studio Code"
    "platform":"GNU/LINUX",
    "software":"Visual Studio Code",
    "version":"1.27.2",
+   "source","https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf",
    "shortcuts":[
-      {
-         "description":"New file",
-         "keys":[
-            "Control",
-            "N"
-         ]
-      },
       {
          "description":"Toogle fulll screen",
          "keys":[

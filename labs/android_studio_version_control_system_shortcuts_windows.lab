@@ -1,0 +1,93 @@
+{
+   "description":"Version Control System keyboard shortcuts on Android Studio",
+   "platform":"Windows/Linux",
+   "software":"Android Studio",
+   "version":"",
+   "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
+   "shortcuts":[
+      {
+         "description":"Commit project to VCS",
+         "keys":[
+            "CONTROL",
+            "K"
+         ]
+      },
+      {
+         "description":"Update project from VCS",
+         "keys":[
+            "CONTROL",
+            "T"
+         ]
+      },
+      {
+         "description":"View recent changes",
+         "keys":[
+            "ALT",
+            "SHIFT",
+            "C"
+         ]
+      },
+      {
+         "description":"Open VCS popup",
+         "keys":[
+            "ALT",
+            "`"
+         ]
+      },
+      {
+         "description":"Change signature",
+         "keys":[
+            "CONTROL",
+            "F6"
+         ]
+      },
+      {
+         "description":"Inline",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "N"
+         ]
+      },
+      {
+         "description":"Extract method",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "M"
+         ]
+      },
+      {
+         "description":"Extract variable",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "V"
+         ]
+      },
+      {
+         "description":"Extract field",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "F"
+         ]
+      },
+      {
+         "description":"Extract constant",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "C"
+         ]
+      },
+      {
+         "description":"Extract parameter",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "P"
+         ]
+      }
+   ]
+}

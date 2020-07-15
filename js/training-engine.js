@@ -31,20 +31,18 @@ function displayNextShortcut() {
 function displayShortcut(shortcut) {
   console.log(`displayShortcut: shortcut ${JSON.stringify(shortcut)}`);
   var description = shortcut.description;
-  var category = shortcut.category === undefined ? "General" : shortcut.category;
 
   document.getElementsByClassName("shortcut-description")[0].innerHTML = description;
 
-  var elements = document.getElementsByClassName("lab-info");
+  var elements = document.getElementsByClassName("lab-headline");
   for (var i = 0; i < elements.length; i++) {
-    elements[i].innerHTML = selectedLab.software;
+    elements[i].innerHTML = selectedLab.software ?  selectedLab.software : "";
   }
 
-  var labVersion = `${selectedLab.version} ${selectedLab.platform}`;
-
-  elements = document.getElementsByClassName("lab-info-version")
+  var subheadline = selectedLab.description ? selectedLab.description : "";
+  elements = document.getElementsByClassName("lab-subheadline")
   for (var i = 0; i < elements.length; i++) {
-    elements[i].innerHTML = labVersion;
+    elements[i].innerHTML = subheadline;
   }
 }
 
@@ -237,6 +235,7 @@ function readFile(file) {
   var reader = new FileReader();
   reader.onload = function (event) {
     var fileLab = JSON.parse(event.target.result);
+    console.log("File lab:" + JSON.stringify(fileLab))
     onLoadLab(fileLab);
   };
 

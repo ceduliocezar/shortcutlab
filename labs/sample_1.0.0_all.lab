@@ -1,7 +1,9 @@
 {
+   "description":"Sample that shows how shortcutlab works",
    "platform":"Windows / Mac / GNU/Linux",
    "software":"Custom Application",
    "version":"1.0.0",
+   "source":"https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_current-page",
    "shortcuts":[
       {
          "description":"Copy",

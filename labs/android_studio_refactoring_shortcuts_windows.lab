@@ -1,0 +1,90 @@
+{
+   "description":"Refactoring on Android Studio",
+   "platform":"Windows/Linux",
+   "software":"Android Studio",
+   "version":"",
+   "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
+   "shortcuts":[
+      {
+         "description":"Copy (Duplicate)",
+         "keys":[
+            "F5"
+         ]
+      },
+      {
+         "description":"Move",
+         "keys":[
+            "F6"
+         ]
+      },
+      {
+         "description":"Safe delete",
+         "keys":[
+            "ALT",
+            "DELETE"
+         ]
+      },
+      {
+         "description":"Rename",
+         "keys":[
+            "SHIFT",
+            "F6"
+         ]
+      },
+      {
+         "description":"Change signature",
+         "keys":[
+            "CONTROL",
+            "F6"
+         ]
+      },
+      {
+         "description":"Inline",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "N"
+         ]
+      },
+      {
+         "description":"Extract method",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "M"
+         ]
+      },
+      {
+         "description":"Extract variable",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "V"
+         ]
+      },
+      {
+         "description":"Extract field",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "F"
+         ]
+      },
+      {
+         "description":"Extract constant",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "C"
+         ]
+      },
+      {
+         "description":"Extract parameter",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "P"
+         ]
+      }
+   ]
+}

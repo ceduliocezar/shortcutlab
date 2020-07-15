@@ -1,0 +1,95 @@
+{
+   "description":"Navigating and searching within Android Studio part 2",
+   "platform":"Windows/Linux",
+   "software":"Android Studio",
+   "version":"",
+   "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
+   "shortcuts":[
+      {
+         "description":"Jump to source",
+         "keys":[
+            "F4"
+         ]
+      },
+      {
+         "description":"Open current editor tab in new window",
+         "keys":[
+            "SHIFT",
+            "F4"
+         ]
+      },
+      {
+         "description":"Recently opened files pop-up",
+         "keys":[
+            "CONTROL",
+            "E"
+         ]
+      },
+      {
+         "description":"Recently edited files pop-up",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "E"
+         ]
+      },
+      {
+         "description":"Go to last edit location",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "BACKSPACE"
+         ]
+      },
+      {
+         "description":"Close active editor tab",
+         "keys":[
+            "CONTROL",
+            "F4"
+         ]
+      },
+      {
+         "description":"Return to editor window from a tool window",
+         "keys":[
+            "ESCAPE"
+         ]
+      },
+      {
+         "description":"Hide active or last active tool window",
+         "keys":[
+            "SHIFT",
+            "ESCAPE"
+         ]
+      },
+      {
+         "description":"Go to line",
+         "keys":[
+            "CONTROL",
+            "G"
+         ]
+      },
+      {
+         "description":"Open type hierarchy",
+         "keys":[
+            "CONTROL",
+            "H"
+         ]
+      },
+      {
+         "description":"Open method hierarchy",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "H"
+         ]
+      },
+      {
+         "description":"Open call hierarchy",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "H"
+         ]
+      }
+   ]
+}
