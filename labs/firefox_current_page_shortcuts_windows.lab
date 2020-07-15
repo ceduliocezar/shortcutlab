@@ -1,7 +1,9 @@
 {
+   "description":"Current page shortcuts for Firefox",
    "platform":"Windows",
    "software":"Firefox",
    "version":"78",
+   "source":"https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_current-page",
    "shortcuts":[
       {
          "description":"Focus Next Link or Input Field ",

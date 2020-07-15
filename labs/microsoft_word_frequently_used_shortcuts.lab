@@ -1,7 +1,9 @@
 {
+   "description":"Frequently used keyboard shortcut on Word for Microsoft Office 365",
    "platform":"Windows",
    "software":"Office",
    "version":"",
+   "source":"https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2#picktab=windows",
    "shortcuts":[
       {
          "description":"Open a document",

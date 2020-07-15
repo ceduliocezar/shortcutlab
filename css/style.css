@@ -32,11 +32,11 @@
   text-decoration: none;
 }
 
-.lab-info {
+.lab-headline {
   text-align: center;
   font-size: 30pt;
 }
-.lab-info-version {
+.lab-subheadline {
   text-align: center;
   font-size: 12pt;
   color: #a9a9a9;

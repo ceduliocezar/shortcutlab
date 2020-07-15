@@ -1,0 +1,90 @@
+{
+   "description":"Navigating and searching within Android Studio part 1",
+   "platform":"Windows/Linux",
+   "software":"Android Studio",
+   "version":"",
+   "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
+   "shortcuts":[
+      {
+         "description":"Find",
+         "keys":[
+            "CONTROL",
+            "F"
+         ]
+      },
+      {
+         "description":"Find next",
+         "keys":[
+            "F3"
+         ]
+      },
+      {
+         "description":"Find previous",
+         "keys":[
+            "SHIFT",
+            "F3"
+         ]
+      },
+      {
+         "description":"Replace",
+         "keys":[
+            "CONTROL",
+            "R"
+         ]
+      },
+      {
+         "description":"Find action",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "A"
+         ]
+      },
+      {
+         "description":"Search by symbol name",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "SHIFT",
+            "N"
+         ]
+      },
+      {
+         "description":"Find file",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "N"
+         ]
+      },
+      {
+         "description":"Find in path",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "F"
+         ]
+      },
+      {
+         "description":"Open file structure pop-up",
+         "keys":[
+            "CONTROL",
+            "F12"
+         ]
+      },
+      {
+         "description":"Navigate to left on open editor tabs",
+         "keys":[
+            "ALT",
+            "ARROWLEFT"
+         ]
+      },
+      {
+         "description":"Navigate to right on open editor tabs",
+         "keys":[
+            "ALT",
+            "ARROWRIGHT"
+         ]
+      }
+   ]
+}

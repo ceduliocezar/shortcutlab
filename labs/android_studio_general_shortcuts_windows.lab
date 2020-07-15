@@ -1,0 +1,71 @@
+{
+   "description":"General keyboard shortcuts for Android Studio",
+   "platform":"Windows/Linux",
+   "software":"Android Studio",
+   "version":"",
+   "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
+   "shortcuts":[
+      {
+         "description":"Save all",
+         "keys":[
+            "CONTROL",
+            "S"
+         ]
+      },
+      {
+         "description":"Synchronize",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "Y"
+         ]
+      },
+      {
+         "description":"Maximize/minimize editor",
+         "keys":[
+            "CONTROL",
+            "SHIFT",
+            "F12"
+         ]
+      },
+      {
+         "description":"Add to favorites",
+         "keys":[
+            "ALT",
+            "SHIFT",
+            "F"
+         ]
+      },
+      {
+         "description":"Inspect current file with current profile",
+         "keys":[
+            "CONTROL",
+            "`"
+         ]
+      },
+      {
+         "description":"Open settings dialogue",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "S"
+         ]
+      },
+      {
+         "description":"Open project structure dialog",
+         "keys":[
+            "CONTROL",
+            "ALT",
+            "SHIFT",
+            "S"
+         ]
+      },
+      {
+         "description":"Switch between tabs and tool window",
+         "keys":[
+            "CONTROL",
+            "TAB"
+         ]
+      }
+   ]
+}
