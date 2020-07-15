@@ -1,4 +1,5 @@
-const labsAPIURL = "https://api.github.com/repos/ceduliocezar/shortcutlab/contents/labs/";
+const labsAPIURL =
+  "https://api.github.com/repos/ceduliocezar/shortcutlab/contents/labs/";
 
 var keysPressed = [];
 
@@ -6,13 +7,19 @@ var selectedLab;
 var currentShortcutIndex;
 var loadedLabs;
 var totalCorrectAnswers = 0;
+var selectedPlatform = "";
+console.log('Initializing key sanitizer');
+var keySanitizer = new KeySanitizer();
 
 redirectToHTTPSIfNecessary();
 clearKeysPressedWhenEnterOnBackgroundState();
 
 function redirectToHTTPSIfNecessary() {
   var host = "shortcutlab.space";
-  if (window.location.host.includes(host) && window.location.protocol != "https:") {
+  if (
+    window.location.host.includes(host) &&
+    window.location.protocol != "https:"
+  ) {
     window.location.protocol = "https";
   }
 }
@@ -29,41 +36,40 @@ function displayNextShortcut() {
 }
 
 function displayShortcut(shortcut) {
+  document.getElementsByClassName("shortcut-challenge-input")[0].style.display =
+    "block";
   console.log(`displayShortcut: shortcut ${JSON.stringify(shortcut)}`);
   var description = shortcut.description;
 
-  document.getElementsByClassName("shortcut-description")[0].innerHTML = description;
-
-  var elements = document.getElementsByClassName("lab-headline");
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].innerHTML = selectedLab.software ?  selectedLab.software : "";
-  }
-
-  var subheadline = selectedLab.description ? selectedLab.description : "";
-  elements = document.getElementsByClassName("lab-subheadline")
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].innerHTML = subheadline;
-  }
+  document.getElementsByClassName(
+    "shortcut-description"
+  )[0].innerHTML = description;
 }
 
 function printKeysPressedState() {
   console.log("printKeysPressedState: " + keysPressed);
 
-  var inputElement = document.getElementsByClassName("shortcut-input")[0]
+  var inputElement = document.getElementsByClassName("shortcut-input")[0];
   if (keysPressed.length > 0) {
     inputElement.innerHTML = keysPressed.join(" + ").toUpperCase();
     inputElement.classList.remove("shortcut-input-hint");
   } else {
-    document.getElementsByClassName("shortcut-input")[0].innerHTML = "Press the key combination"
+    document.getElementsByClassName("shortcut-input")[0].innerHTML =
+      "Press the key combination";
     inputElement.classList.add("shortcut-input-hint");
   }
 }
 
 function matchCombination() {
   var currentShortcut = selectedLab.shortcuts[currentShortcutIndex];
-  var userCombinationToDisplay = keysPressed.join(" + ").toUpperCase()
+  var userCombinationToDisplay = keysPressed.join(" + ").toUpperCase();
 
-  if (keysPressed.join(", ").toLowerCase() === currentShortcut.keys.join(", ").toLowerCase()) {
+  console.log(selectedPlatform);
+
+  if (
+    keysPressed.join(", ").toLowerCase() ===
+    currentShortcut[selectedPlatform].join(", ").toLowerCase()
+  ) {
     displayAsCorrect(userCombinationToDisplay);
     totalCorrectAnswers++;
   } else {
@@ -72,18 +78,24 @@ function matchCombination() {
 }
 
 function endLabSession() {
-  console.log('endLabSession');
+  console.log("endLabSession");
   unregisterKeyListeners();
   displayEndSessionView();
-  document.getElementsByClassName("retry-button")[0].style.display = "inline-block"
-  document.getElementsByClassName("correct-score")[0].innerHTML = totalCorrectAnswers;
-  document.getElementsByClassName("total-shortcuts")[0].innerHTML = selectedLab.shortcuts.length;
+  document.getElementsByClassName("retry-button")[0].style.display =
+    "inline-block";
+  document.getElementsByClassName(
+    "correct-score"
+  )[0].innerHTML = totalCorrectAnswers;
+  document.getElementsByClassName("total-shortcuts")[0].innerHTML =
+    selectedLab.shortcuts.length;
 }
 
 function displayEndSessionView() {
-  console.log('displayEndSessionView');
-  document.getElementsByClassName("shortcut-challenge-input")[0].style.display = "none";
-  document.getElementsByClassName("end-session-container")[0].style.display = "block";
+  console.log("displayEndSessionView");
+  document.getElementsByClassName("shortcut-challenge-input")[0].style.display =
+    "none";
+  document.getElementsByClassName("end-session-container")[0].style.display =
+    "block";
 }
 
 function displayAsCorrect(userCombination) {
@@ -92,7 +104,7 @@ function displayAsCorrect(userCombination) {
   li.classList.add("shortcut-item");
   li.appendChild(createHistoryDescriptionItem(false));
   li.appendChild(createHistoryCombinationItem(userCombination));
-  document.getElementsByClassName("shortcut-list")[0].prepend(li);
+  document.getElementsByClassName("shortcut-history-list")[0].prepend(li);
 }
 
 function displayAsIncorrect(userCombination) {
@@ -100,10 +112,10 @@ function displayAsIncorrect(userCombination) {
   li.classList.add("incorrect");
   li.classList.add("shortcut-item");
   li.appendChild(createHistoryDescriptionItem(true));
-  var userCombinationElement = createHistoryCombinationItem(userCombination)
-  userCombinationElement.classList.add("incorrect-user-combination")
+  var userCombinationElement = createHistoryCombinationItem(userCombination);
+  userCombinationElement.classList.add("incorrect-user-combination");
   li.appendChild(userCombinationElement);
-  document.getElementsByClassName("shortcut-list")[0].prepend(li);
+  document.getElementsByClassName("shortcut-history-list")[0].prepend(li);
 }
 
 function createHistoryDescriptionItem(incorrect) {
@@ -113,7 +125,11 @@ function createHistoryDescriptionItem(incorrect) {
   descriptionElement.innerHTML = currentShortcut.description;
 
   if (incorrect) {
-    descriptionElement.innerHTML = descriptionElement.innerHTML + " (" + currentShortcut.keys.join(" + ") + ")";
+    descriptionElement.innerHTML =
+      descriptionElement.innerHTML +
+      " (" +
+      currentShortcut[selectedPlatform].join(" + ") +
+      ")";
   }
   descriptionElement.classList.add("history-item-description");
 
@@ -123,7 +139,7 @@ function createHistoryDescriptionItem(incorrect) {
 function createHistoryCombinationItem(userCombination) {
   var currentShortcut = selectedLab.shortcuts[currentShortcutIndex];
   let combinationElement = document.createElement("p");
-  combinationElement.innerHTML = userCombination
+  combinationElement.innerHTML = userCombination;
   combinationElement.classList.add("history-item-combination");
 
   return combinationElement;
@@ -134,8 +150,10 @@ function startSelectionView() {
   hideEndSessionView();
   document.getElementsByClassName("intro-container")[0].style.display = "none";
   document.getElementsByClassName("content")[0].style.display = "block";
-  document.getElementsByClassName("lab-selection-container")[0].style.display = "block";
-  document.getElementsByClassName("lab-session-container")[0].style.display = "none";
+  document.getElementsByClassName("lab-selection-container")[0].style.display =
+    "block";
+  document.getElementsByClassName("lab-session-container")[0].style.display =
+    "none";
   document.getElementsByClassName("footer-content")[0].style.display = "none";
   document.getElementById("labs-loader").style.display = "block";
 
@@ -152,28 +170,33 @@ function removeAllLabsFromList() {
 
 function displayLabSessionView() {
   console.log("displayLabSessionView: ");
-  document.getElementsByClassName("lab-session-container")[0].style.display = "block";
+  document.getElementsByClassName("lab-session-container")[0].style.display =
+    "block";
   document.getElementsByClassName("content")[0].style.display = "block";
   hideLoadingContainer();
   hideEndSessionView();
   document.getElementsByClassName("intro-container")[0].style.display = "none";
-  document.getElementsByClassName("lab-selection-container")[0].style.display = "none";
-  document.getElementsByClassName("retry-button")[0].style.display = "none"
+  document.getElementsByClassName("lab-selection-container")[0].style.display =
+    "none";
+  document.getElementsByClassName("retry-button")[0].style.display = "none";
 }
 
 function displayLoadingContainer() {
   console.log("displayLoadingContainer: ");
-  document.getElementsByClassName("lab-loading-container")[0].style.display = "block";
+  document.getElementsByClassName("lab-loading-container")[0].style.display =
+    "block";
 }
 
 function hideLoadingContainer() {
   console.log("hideLoadingContainer: ");
-  document.getElementsByClassName("lab-loading-container")[0].style.display = "none";
+  document.getElementsByClassName("lab-loading-container")[0].style.display =
+    "none";
 }
 
 function hideSelectionView() {
   console.log("hideSelectionView");
-  document.getElementsByClassName("lab-loading-container")[0].style.display = "none";
+  document.getElementsByClassName("lab-loading-container")[0].style.display =
+    "none";
 }
 
 function displayLabsForSelection(data) {
@@ -235,7 +258,7 @@ function readFile(file) {
   var reader = new FileReader();
   reader.onload = function (event) {
     var fileLab = JSON.parse(event.target.result);
-    console.log("File lab:" + JSON.stringify(fileLab))
+    console.log("File lab:" + JSON.stringify(fileLab));
     onLoadLab(fileLab);
   };
 
@@ -244,19 +267,85 @@ function readFile(file) {
 
 function startLabSession(lab) {
   clearLabSessionState();
-  registerKeyListeners();
-
   displayLabSessionView();
-  document.getElementsByClassName("shortcut-challenge-input")[0].style.display = "block";
 
-  selectedLab = lab;
   currentShortcutIndex = 0;
-  displayShortcut(selectedLab.shortcuts[currentShortcutIndex]);
+  selectedLab = lab;
+
+  var elements = document.getElementsByClassName("lab-headline");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = selectedLab.software ? selectedLab.software : "";
+  }
+
+  var subheadline = selectedLab.description ? selectedLab.description : "";
+  elements = document.getElementsByClassName("lab-subheadline");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].innerHTML = subheadline;
+  }
+
+  if (selectedLab.platforms.length > 1) {
+    displayPlatformSelectionView();
+  } else {
+    registerKeyListeners();
+    selectedPlatform = lab.platforms ? lab.platforms[0].id : "all platforms";
+    displayShortcut(selectedLab.shortcuts[currentShortcutIndex]);
+    document.getElementsByClassName(
+      "shortcut-challenge-input"
+    )[0].style.display = "block";
+  }
+}
+
+function displayPlatformSelectionView() {
+  console.log("displayPlatformSelectionView");
+  var element = document.getElementsByClassName(
+    "platform-selection-container"
+  )[0];
+
+  if (!element) {
+    console.log("No platform selection element available");
+    return;
+  }
+  element.style.display = "block";
+
+  var buttonsContainer = document.getElementsByClassName(
+    "popup-buttons-container"
+  )[0];
+  while (buttonsContainer.firstChild) {
+    buttonsContainer.removeChild(element.firstChild);
+  }
+
+  selectedLab.platforms.forEach((platform) => {
+    var link = document.createElement("a");
+    link.classList.add("popup-button");
+    link.href = "#";
+    link.innerHTML = platform.description;
+    link.addEventListener("click", function () {
+      registerKeyListeners();
+      hidePlatformSelectionView();
+      selectedPlatform = platform.id;
+      displayShortcut(selectedLab.shortcuts[currentShortcutIndex]);
+    });
+    buttonsContainer.appendChild(link);
+  });
+}
+
+function hidePlatformSelectionView() {
+  console.log("hidePlatformSelectionView");
+  var element = document.getElementsByClassName(
+    "platform-selection-container"
+  )[0];
+
+  if (!element) {
+    console.log("No platform selection element available");
+    return;
+  }
+  element.style.display = "none";
 }
 
 function hideEndSessionView() {
   console.log("hideEndSessionView");
-  document.getElementsByClassName("end-session-container")[0].style.display = "none";
+  document.getElementsByClassName("end-session-container")[0].style.display =
+    "none";
 }
 
 function registerKeyListeners() {
@@ -274,7 +363,6 @@ function registerKeyUpListener() {
 }
 
 function onKeyUp(event) {
-
   if (hasKeysPressed()) {
     matchCombination();
     resetKeysPressed();
@@ -298,10 +386,10 @@ function registerKeyDownListener() {
 }
 
 function onKeyDown(event) {
-  const key = event.key;
+  const key = keySanitizer.sanitize(event.key);
 
   if (!keysPressed.includes(key)) {
-    console.log("New key down identified:");
+    console.log("New key down identified:" + key + "code:" + event.code);
     keysPressed.push(key);
     printKeysPressedState();
   }
@@ -317,7 +405,9 @@ function finishSession() {
 }
 
 function clearShortcutHistory() {
-  const historyElement = document.getElementsByClassName("shortcut-list")[0];
+  const historyElement = document.getElementsByClassName(
+    "shortcut-history-list"
+  )[0];
 
   while (historyElement.firstChild) {
     historyElement.removeChild(historyElement.firstChild);
@@ -330,14 +420,21 @@ function clearLabSessionState() {
 }
 
 function clearKeysPressedWhenEnterOnBackgroundState() {
+  window.addEventListener(
+    "blur",
+    function () {
+      clearKeysPressed();
+    },
+    false
+  );
 
-  window.addEventListener('blur', function () {
-    clearKeysPressed();
-  }, false);
-
-  window.addEventListener('focus', function () {
-    clearKeysPressed();
-  }, false);
+  window.addEventListener(
+    "focus",
+    function () {
+      clearKeysPressed();
+    },
+    false
+  );
 }
 
 function clearKeysPressed() {
@@ -345,3 +442,10 @@ function clearKeysPressed() {
   printKeysPressedState();
 }
 
+function onClickCloseTrainingSession() {
+  unregisterKeyListeners();
+  selectedPlatform = null;
+  selectedLab = null;
+  totalCorrectAnswers = 0;
+  startSelectionView();
+}

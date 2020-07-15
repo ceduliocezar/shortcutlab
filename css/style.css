@@ -42,8 +42,47 @@
   color: #a9a9a9;
 }
 
+.platform-selection-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #daf0fb;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+.popup-headline {
+  text-align: center;
+  font-size: 12pt;
+  color: #424242;
+}
+
+.popup-button {
+  margin: auto;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+  padding: 10px;
+  border: 1px solid #ab47bcff;
+  color: #ab47bcff;
+}
+
+.popup-button:hover {
+  background: #ab47bc55;
+}
+
+.popup-buttons-container {
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
 body {
-  background-color: #FFFFFF;
+  overflow: scroll;
+  background-color: #ffffff;
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
@@ -78,7 +117,7 @@ p {
 
 .shortcut-input-container {
   margin-top: 20px;
-  background-color: #FFF;
+  background-color: #fff;
   padding-left: 10px;
   padding-right: 20px;
   border-radius: 5px;
@@ -110,7 +149,7 @@ p {
   }
 }
 
-.shortcut-list {
+.shortcut-history-list {
   list-style-type: none;
   padding: 0;
   margin: 0 0 0 0;
@@ -162,7 +201,7 @@ p {
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 20px;
-  background-color: #DAF0FB;
+  background-color: #daf0fb;
   border-radius: 10px;
 }
 
@@ -218,7 +257,7 @@ p {
   margin: auto;
   text-align: center;
   margin-top: 114px;
-  color: #FFF;
+  color: #fff;
   font-size: 24px;
   font-family: Montserrat, Helvetica, sans-serif;
   text-decoration: none;
@@ -258,6 +297,8 @@ p {
   margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .lab-list-container {
@@ -401,14 +442,15 @@ nav {
   text-align: center;
 }
 
-.shortcut-challenge-input{
+.shortcut-challenge-input {
   margin-top: 50px;
   margin-bottom: 50px;
-  background-color: #DAF0FB;
+  background-color: #daf0fb;
   padding: 20px;
   border-radius: 10px;
+  display: none;
 }
 
-.incorrect-user-combination{
-  color: #b80c09; 
+.incorrect-user-combination {
+  color: #b80c09;
 }

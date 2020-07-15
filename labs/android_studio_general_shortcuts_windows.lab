@@ -1,20 +1,25 @@
 {
-   "description":"General keyboard shortcuts for Android Studio",
-   "platform":"Windows/Linux",
+   "description":"General keyboard shortcuts",
+   "platforms": [
+      {
+         "id": "windows_linux",
+         "description": "Windows/Linux"
+      }
+   ],
    "software":"Android Studio",
    "version":"",
-   "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
+   "sources":"https://developer.android.com/studio/intro/keyboard-shortcuts",
    "shortcuts":[
       {
          "description":"Save all",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "S"
          ]
       },
       {
          "description":"Synchronize",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "Y"
@@ -22,7 +27,7 @@
       },
       {
          "description":"Maximize/minimize editor",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "SHIFT",
             "F12"
@@ -30,7 +35,7 @@
       },
       {
          "description":"Add to favorites",
-         "keys":[
+         "windows_linux":[
             "ALT",
             "SHIFT",
             "F"
@@ -38,14 +43,14 @@
       },
       {
          "description":"Inspect current file with current profile",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "`"
          ]
       },
       {
          "description":"Open settings dialogue",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "S"
@@ -53,7 +58,7 @@
       },
       {
          "description":"Open project structure dialog",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "SHIFT",
@@ -62,7 +67,7 @@
       },
       {
          "description":"Switch between tabs and tool window",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "TAB"
          ]

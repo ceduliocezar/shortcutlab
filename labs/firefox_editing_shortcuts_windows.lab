@@ -1,94 +1,99 @@
 {
-   "description":"Editing shortcuts for Firefox",
-   "platform":"Windows",
+   "description":"Editing shortcuts",
+   "platforms": [
+      {
+         "id": "windows",
+         "description": "Windows"
+      }
+   ],
    "software":"Firefox",
    "version":"78",
    "source":"https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_editing",
    "shortcuts":[
       {
          "description":"Copy",
-         "keys":[
+         "windows":[
             "CONTROL",
             "C"
          ]
       },
       {
          "description":"Cut",
-         "keys":[
+         "windows":[
             "CONTROL",
             "X"
          ]
       },
       {
          "description":"Delete",
-         "keys":[
+         "windows":[
             "DELETE"
          ]
       },
       {
          "description":"Delete Word to the Left",
-         "keys":[
+         "windows":[
             "CONTROL",
             "BACKSPACE"
          ]
       },
       {
          "description":"Delete Word to the Right",
-         "keys":[
+         "windows":[
             "CONTROL",
             "DELETE"
          ]
       },
       {
          "description":"Go one Word to the Left",
-         "keys":[
+         "windows":[
             "CONTROL",
             "ARROWLEFT"
          ]
       },
       {
          "description":"Go one Word to the Right",
-         "keys":[
+         "windows":[
             "CONTROL",
             "ARROWRIGHT"
          ]
       },
       {
          "description":"Go to Beginning of Line",
-         "keys":[
+         "windows":[
             "HOME"
          ]
       },
       {
          "description":"Go to End of Line",
-         "keys":[
+         "windows":[
             "END"
          ]
       },
       {
          "description":"Go to Beginning of Text",
-         "keys":[
+         "windows":[
             "CONTROL",
             "HOME"
          ]
       },
       {
          "description":"Go to End of Text",
-         "keys":[
+         "windows":[
             "CONTROL",
             "END"
          ]
       },
       {
          "description":"Paste",
-         "keys":[
+         "windows":[
             "CONTROL",
             "V"
          ]
       },
       {
          "description":"Paste (as plain text) ",
-         "keys":[
+         "windows":[
             "CONTROL",
             "SHIFT",
             "V"
@@ -96,21 +101,21 @@
       },
       {
          "description":"Redo",
-         "keys":[
+         "windows":[
             "CONTROL",
             "Y"
          ]
       },
       {
          "description":"Select All",
-         "keys":[
+         "windows":[
             "CONTROL",
             "A"
          ]
       },
       {
          "description":"Undo",
-         "keys":[
+         "windows":[
             "CONTROL",
             "Z"
          ]

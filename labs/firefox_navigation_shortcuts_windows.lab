@@ -1,61 +1,66 @@
 {
-   "description":"Navigation keyboard shortcuts for Firefox",
-   "platform":"Windows",
+   "description":"Navigation keyboard shortcuts ",
+   "platforms": [
+      {
+         "id": "windows",
+         "description": "Windows"
+      }
+   ],
    "software":"Firefox",
    "version":"78",
    "source":"https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_navigation",
    "shortcuts":[
       {
          "description":"Back",
-         "keys":[
+         "windows":[
             "Alt",
             "ARROWLEFT"
          ]
       },
       {
          "description":"Forward",
-         "keys":[
+         "windows":[
             "ALT",
             "ARROWRIGHT"
          ]
       },
       {
          "description":"Cut the selected content to the Clipboard",
-         "keys":[
+         "windows":[
             "ALT",
             "HOME"
          ]
       },
       {
          "description":"Open file",
-         "keys":[
+         "windows":[
             "Control",
             "O"
          ]
       },
       {
          "description":"Reload page",
-         "keys":[
+         "windows":[
             "F5"
          ]
       },
       {
          "description":"Reload page and override cache",
-         "keys":[
+         "windows":[
             "Control",
             "F5"
          ]
       },
       {
          "description":"Apply italic formatting to text",
-         "keys":[
+         "windows":[
             "Control",
             "I"
          ]
       },
       {
          "description":"Stop",
-         "keys":[
+         "windows":[
             "ESCAPE"
          ]
       }
