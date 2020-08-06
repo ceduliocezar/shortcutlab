@@ -454,3 +454,11 @@ nav {
 .incorrect-user-combination {
   color: #b80c09;
 }
+
+.shortcut-lab-version {
+  color: #554d56;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
