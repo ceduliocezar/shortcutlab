@@ -63,13 +63,20 @@
 
         <div class="lab-session-container">
             <div class="buttons-container">
-                <a class="button-link close-button" href="#" onclick="startSelectionView();return false;">
+                <a class="button-link close-button" href="#" onclick="onClickCloseTrainingSession();return false;">
                 </a>
                 <a class="button-link retry-button" href="#" onclick="retryLab();return false;">
                 </a>
             </div>
             <p class="page-title lab-headline"></p>
-            <p class="lab-subheadline">v1.0.0 - GNU/Linux</p>
+            <p class="lab-subheadline"></p>
+            
+            <div class="platform-selection-container" id="platform-selection-container">
+                <p class="popup-headline">To proceed please select one platform</p>
+
+                <div class="popup-buttons-container"></div>
+            </div>
+
             <div class="shortcut-challenge-input">
                 <p class="shortcut-description"></p>
                 <div class="shortcut-input-container">
@@ -82,7 +89,7 @@
                 <p class="score"><span class="correct-score">0</span>/<span class="total-shortcuts">0</span></p>
             </div>
 
-            <ul class="shortcut-list">
+            <ul class="shortcut-history-list">
             </ul>
         </div>
     </div>
@@ -105,9 +112,9 @@
             </nav>
         </div>
     </footer>
-
+    <script type="text/javascript" src="./js/key-sanitizer.js"></script>
     <script type="text/javascript" src="./js/training-engine.js"></script>
-    <script type="text/javascript" src="./js/fetch-labs.js"></script>
+    <script type="text/javascript" src="./js/labs-api.js"></script>
 </body>
 
 </html>

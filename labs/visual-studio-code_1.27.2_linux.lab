@@ -1,25 +1,30 @@
 {
-   "description":"General keyboard shortcuts for Visual Studio Code"
-   "platform":"GNU/LINUX",
+   "description":"General keyboard shortcuts"
+   "platforms": [
+      {
+         "id": "linux",
+         "description": "GNU/Linux"
+      }
+   ],
    "software":"Visual Studio Code",
    "version":"1.27.2",
    "source","https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf",
    "shortcuts":[
       {
          "description":"Toogle fulll screen",
-         "keys":[
+         "linux":[
             "F11"
          ]
       },
       {
          "description":"Go to next error",
-         "keys":[
+         "linux":[
             "F8"
          ]
       },
       {
          "description":"Show source control",
-         "keys":[
+         "linux":[
             "Control",
             "Shift",
             "G"
@@ -27,45 +32,45 @@
       },
       {
          "description":"Toogle breakpoint",
-         "keys":[
+         "linux":[
             "F9"
          ]
       },
       {
          "description":"Start / Continue ",
-         "keys":[
+         "linux":[
             "F5"
          ]
       },
       {
          "description":"Step in / out ",
-         "keys":[
+         "linux":[
             "F11"
          ]
       },
       {
          "description":"Step over ",
-         "keys":[
+         "linux":[
             "F10"
          ]
       },
       {
          "description":"Stop ",
-         "keys":[
+         "linux":[
             "Shift",
             "F10"
          ]
       },
       {
          "description":"Show hover ",
-         "keys":[
+         "linux":[
             "Control",
             "K"
          ]
       },
       {
          "description":"Show Command Pallete",
-         "keys":[
+         "linux":[
             "Control",
             "Shift",
             "P"
@@ -73,14 +78,14 @@
       },
       {
          "description":"Quick Open, Go to File",
-         "keys":[
+         "linux":[
             "Control",
             "P"
          ]
       },
       {
          "description":"New window/instance",
-         "keys":[
+         "linux":[
             "Control",
             "Shift",
             "N"
@@ -88,21 +93,21 @@
       },
       {
          "description":"Close window/instance",
-         "keys":[
+         "linux":[
             "Control",
             "W"
          ]
       },
       {
          "description":"User settings",
-         "keys":[
+         "linux":[
             "Control",
             ","
          ]
       },
       {
          "description":"Keyboard shortcuts",
-         "keys":[
+         "linux":[
             "Control",
             "K"
          ]

@@ -1,84 +1,89 @@
 {
    "description":"Current page shortcuts for Firefox",
-   "platform":"Windows",
+   "platforms": [
+      {
+         "id": "windows",
+         "description": "Windows"
+      }
+   ],
    "software":"Firefox",
    "version":"78",
    "source":"https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_current-page",
    "shortcuts":[
       {
          "description":"Focus Next Link or Input Field ",
-         "keys":[
+         "windows":[
             "TAB"
          ]
       },
       {
          "description":"Focus Previous Link or Input Field ",
-         "keys":[
+         "windows":[
             "SHIFT",
             "TAB"
          ]
       },
       {
          "description":"Go Down a Screen ",
-         "keys":[
+         "windows":[
             "PAGEDOWN"
          ]
       },
       {
          "description":"Go Up a Screen ",
-         "keys":[
+         "windows":[
             "PAGEUP"
          ]
       },
       {
          "description":"Go to Bottom of Page ",
-         "keys":[
+         "windows":[
             "END"
          ]
       },
       {
          "description":"Go to Top of Page",
-         "keys":[
+         "windows":[
             "HOME"
          ]
       },
       {
          "description":"Move to Next Frame ",
-         "keys":[
+         "windows":[
             "F6"
          ]
       },
       {
          "description":"Print",
-         "keys":[
+         "windows":[
             "CONTROL",
             "P"
          ]
       },
       {
          "description":"Save Page As",
-         "keys":[
+         "windows":[
             "CONTROL",
             "S"
          ]
       },
       {
          "description":"Zoom In",
-         "keys":[
+         "windows":[
             "CONTROL",
             "+"
          ]
       },
       {
          "description":"Zoom Out",
-         "keys":[
+         "windows":[
             "CONTROL",
             "-"
          ]
       },
       {
          "description":"Zoom Reset",
-         "keys":[
+         "windows":[
             "CONTROL",
             "0"
          ]

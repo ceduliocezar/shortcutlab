@@ -1,117 +1,122 @@
 {
-   "description":"Frequently used keyboard shortcut on Word for Microsoft Office 365",
-   "platform":"Windows",
-   "software":"Office",
+   "description":"Frequently used keyboard shortcut",
+   "platforms": [
+      {
+         "id": "windows",
+         "description": "Windows"
+      }
+   ],
+   "software":"Word for Microsoft Office 365",
    "version":"",
    "source":"https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2#picktab=windows",
    "shortcuts":[
       {
          "description":"Open a document",
-         "keys":[
+         "windows":[
             "Control",
             "O"
          ]
       },
       {
          "description":"Save the document",
-         "keys":[
+         "windows":[
             "Control",
             "S"
          ]
       },
       {
          "description":"Cut the selected content to the Clipboard",
-         "keys":[
+         "windows":[
             "Control",
             "X"
          ]
       },
       {
          "description":"Paste the contents of the Clipboard",
-         "keys":[
+         "windows":[
             "Control",
             "V"
          ]
       },
       {
          "description":"Select all document content",
-         "keys":[
+         "windows":[
             "Control",
             "A"
          ]
       },
       {
          "description":"Apply bold formatting to text",
-         "keys":[
+         "windows":[
             "Control",
             "B"
          ]
       },
       {
          "description":"Apply italic formatting to text",
-         "keys":[
+         "windows":[
             "Control",
             "I"
          ]
       },
       {
          "description":"Apply underline formatting to text",
-         "keys":[
+         "windows":[
             "Control",
             "U"
          ]
       },
       {
          "description":"Decrease the font size by 1 point",
-         "keys":[
+         "windows":[
             "Control",
             "["
          ]
       },
       {
          "description":"Increase the font size by 1 point",
-         "keys":[
+         "windows":[
             "Control",
             "]"
          ]
       },
       {
          "description":"Align the text to the left",
-         "keys":[
+         "windows":[
             "Control",
             "L"
          ]
       },
       {
          "description":"Align the text to the right",
-         "keys":[
+         "windows":[
             "Control",
             "R"
          ]
       },
       {
          "description":"Cancel a command",
-         "keys":[
+         "windows":[
             "Escape"
          ]
       },
       {
          "description":"Undo the previous action",
-         "keys":[
+         "windows":[
             "Control",
             "Z"
          ]
       },
       {
          "description":"Redo the previous action, if possible",
-         "keys":[
+         "windows":[
             "Control",
             "Y"
          ]
       },
       {
          "description":"Split the document window",
-         "keys":[
+         "windows":[
             "Control",
             "Alt",
             "S"
@@ -119,7 +124,7 @@
       },
       {
          "description":"Remove the document window split",
-         "keys":[
+         "windows":[
             "Alt",
             "Shift",
             "C"

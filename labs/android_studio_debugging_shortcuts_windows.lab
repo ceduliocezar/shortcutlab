@@ -1,73 +1,80 @@
 {
-   "description":"Version control system keyboard shortcuts on Android Studio",
-   "platform":"Windows/Linux",
-   "software":"Android Studio",
-   "version":"",
-   "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
-   "shortcuts":[
+   "description": "Version control system keyboard shortcuts",
+   "platforms": [
       {
-         "description":"Debug",
-         "keys":[
+         "id": "windows_linux",
+         "description": "Windows/Linux"
+      }
+   ],
+   "software": "Android Studio",
+   "version": "",
+   "sources": [
+      "https://developer.android.com/studio/intro/keyboard-shortcuts"
+   ],
+   "shortcuts": [
+      {
+         "description": "Debug",
+         "windows_linux": [
             "SHIFT",
             "F9"
          ]
       },
       {
-         "description":"Step over",
-         "keys":[
+         "description": "Step over",
+         "windows_linux": [
             "F8"
          ]
       },
       {
-         "description":"Step into",
-         "keys":[
+         "description": "Step into",
+         "windows_linux": [
             "F7"
          ]
       },
       {
-         "description":"Smart step into",
-         "keys":[
+         "description": "Smart step into",
+         "windows_linux": [
             "SHIFT",
             "F7"
          ]
       },
       {
-         "description":"Step out",
-         "keys":[
+         "description": "Step out",
+         "windows_linux": [
             "SHIFT",
             "F8"
          ]
       },
       {
-         "description":"Run to cursor",
-         "keys":[
+         "description": "Run to cursor",
+         "windows_linux": [
             "ALT",
             "F9"
          ]
       },
       {
-         "description":"Evaluate expression",
-         "keys":[
+         "description": "Evaluate expression",
+         "windows_linux": [
             "ALT",
             "F8"
          ]
       },
       {
-         "description":"Resume program",
-         "keys":[
+         "description": "Resume program",
+         "windows_linux": [
             "F9"
          ]
       },
       {
-         "description":"Toggle breakpoint",
-         "keys":[
+         "description": "Toggle breakpoint",
+         "windows_linux": [
             "CONTROL",
             "F8"
          ]
       },
       {
-         "description":"View breakpoints",
-         "keys":[
+         "description": "View breakpoints",
+         "windows_linux": [
             "CONTROL",
             "SHIFT",
             "F8"

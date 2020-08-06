@@ -1,27 +1,32 @@
 {
-   "description":"Version Control System keyboard shortcuts on Android Studio",
-   "platform":"Windows/Linux",
+   "description":"Version Control System keyboard shortcuts",
+   "platforms": [
+      {
+         "id": "windows_linux",
+         "description": "Windows/Linux"
+      }
+   ],
    "software":"Android Studio",
    "version":"",
    "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
    "shortcuts":[
       {
          "description":"Commit project to VCS",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "K"
          ]
       },
       {
          "description":"Update project from VCS",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "T"
          ]
       },
       {
          "description":"View recent changes",
-         "keys":[
+         "windows_linux":[
             "ALT",
             "SHIFT",
             "C"
@@ -29,21 +34,21 @@
       },
       {
          "description":"Open VCS popup",
-         "keys":[
+         "windows_linux":[
             "ALT",
             "`"
          ]
       },
       {
          "description":"Change signature",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "F6"
          ]
       },
       {
          "description":"Inline",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "N"
@@ -51,7 +56,7 @@
       },
       {
          "description":"Extract method",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "M"
@@ -59,7 +64,7 @@
       },
       {
          "description":"Extract variable",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "V"
@@ -67,7 +72,7 @@
       },
       {
          "description":"Extract field",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "F"
@@ -75,7 +80,7 @@
       },
       {
          "description":"Extract constant",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "C"
@@ -83,7 +88,7 @@
       },
       {
          "description":"Extract parameter",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "P"

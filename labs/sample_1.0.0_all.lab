@@ -1,34 +1,59 @@
 {
    "description":"Sample that shows how shortcutlab works",
-   "platform":"Windows / Mac / GNU/Linux",
+   "platforms": [
+      {
+         "id": "windows_linux",
+         "description": "Windows/Linux"
+      },
+      {
+         "id": "mac",
+         "description": "Mac"
+      }
+
+   ],
    "software":"Custom Application",
    "version":"1.0.0",
    "source":"https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly#w_current-page",
    "shortcuts":[
       {
          "description":"Copy",
-         "keys":[
+         "windows_linux":[
             "Control",
+            "C"
+         ],
+         "mac":[
+            "META",
             "C"
          ]
       },
       {
          "description":"Paste",
-         "keys":[
+         "windows_linux":[
             "Control",
+            "V"
+         ],
+         "mac":[
+            "META",
             "V"
          ]
       },
       {
          "description":"Cut",
-         "keys":[
+         "windows_linux":[
             "Control",
+            "X"
+         ],
+         "mac":[
+            "META",
             "X"
          ]
       },
       {
          "description":"Help",
-         "keys":[
+         "windows_linux":[
+            "F1"
+         ],
+         "mac":[
             "F1"
          ]
       }

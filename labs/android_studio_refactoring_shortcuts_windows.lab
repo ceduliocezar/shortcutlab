@@ -1,46 +1,51 @@
 {
    "description":"Refactoring on Android Studio",
-   "platform":"Windows/Linux",
+   "platforms": [
+      {
+         "id": "windows_linux",
+         "description": "Windows/Linux"
+      }
+   ],
    "software":"Android Studio",
    "version":"",
    "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
    "shortcuts":[
       {
          "description":"Copy (Duplicate)",
-         "keys":[
+         "windows_linux":[
             "F5"
          ]
       },
       {
          "description":"Move",
-         "keys":[
+         "windows_linux":[
             "F6"
          ]
       },
       {
          "description":"Safe delete",
-         "keys":[
+         "windows_linux":[
             "ALT",
             "DELETE"
          ]
       },
       {
          "description":"Rename",
-         "keys":[
+         "windows_linux":[
             "SHIFT",
             "F6"
          ]
       },
       {
          "description":"Change signature",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "F6"
          ]
       },
       {
          "description":"Inline",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "N"
@@ -48,7 +53,7 @@
       },
       {
          "description":"Extract method",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "M"
@@ -56,7 +61,7 @@
       },
       {
          "description":"Extract variable",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "V"
@@ -64,7 +69,7 @@
       },
       {
          "description":"Extract field",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "F"
@@ -72,7 +77,7 @@
       },
       {
          "description":"Extract constant",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "C"
@@ -80,7 +85,7 @@
       },
       {
          "description":"Extract parameter",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "P"

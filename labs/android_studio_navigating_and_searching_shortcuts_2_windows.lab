@@ -1,33 +1,38 @@
 {
-   "description":"Navigating and searching within Android Studio part 2",
-   "platform":"Windows/Linux",
+   "description":"Navigating and searching part 2",
+   "platforms": [
+      {
+         "id": "windows_linux",
+         "description": "Windows/Linux"
+      }
+   ],
    "software":"Android Studio",
    "version":"",
    "source":"https://developer.android.com/studio/intro/keyboard-shortcuts",
    "shortcuts":[
       {
          "description":"Jump to source",
-         "keys":[
+         "windows_linux":[
             "F4"
          ]
       },
       {
          "description":"Open current editor tab in new window",
-         "keys":[
+         "windows_linux":[
             "SHIFT",
             "F4"
          ]
       },
       {
          "description":"Recently opened files pop-up",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "E"
          ]
       },
       {
          "description":"Recently edited files pop-up",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "SHIFT",
             "E"
@@ -35,7 +40,7 @@
       },
       {
          "description":"Go to last edit location",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "SHIFT",
             "BACKSPACE"
@@ -43,41 +48,41 @@
       },
       {
          "description":"Close active editor tab",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "F4"
          ]
       },
       {
          "description":"Return to editor window from a tool window",
-         "keys":[
+         "windows_linux":[
             "ESCAPE"
          ]
       },
       {
          "description":"Hide active or last active tool window",
-         "keys":[
+         "windows_linux":[
             "SHIFT",
             "ESCAPE"
          ]
       },
       {
          "description":"Go to line",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "G"
          ]
       },
       {
          "description":"Open type hierarchy",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "H"
          ]
       },
       {
          "description":"Open method hierarchy",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "SHIFT",
             "H"
@@ -85,7 +90,7 @@
       },
       {
          "description":"Open call hierarchy",
-         "keys":[
+         "windows_linux":[
             "CONTROL",
             "ALT",
             "H"
